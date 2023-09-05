@@ -1,0 +1,224 @@
+{
+    "pages": {
+      "default":[
+        {
+            "name":"Home",
+            "sections": ["welcome", "about", "services","subscribe","clients"]
+        },
+        {
+            "name":"About Us",
+            "sections": ["about2", "testimonials", "counter","team"]
+        },
+        {
+            "name":"Blog",
+            "type": "blog",
+            "sections": ["blog"]
+        },
+        {
+            "name":"Services",
+            "sections": ["features"]
+        },
+        {
+            "name":"Contact Us",
+            "sections": ["contact"]
+        }
+      ],
+     "presets":[
+        {
+            "label": "About",
+            "options": [
+                    {
+                        "label": "Basic",
+                        "sections": ["about", "about2", "testimonials"]
+                    },
+                    {
+                        "label": "Professional",
+                        "sections": ["about2", "testimonials2"]
+                    }
+                ]
+       },
+      {
+            "label": "Blogs",
+            "options": [
+                    {
+                        "label": "Basic",
+                        "sections": ["blog"]
+                    }
+                ]
+       },
+      {
+            "label": "Contact",
+            "options": [
+                    {
+                        "label": "Basic",
+                        "sections": ["contact"]
+                    },
+                    {
+                        "label": "Classic",
+                        "sections": ["form3"]
+                    }
+                ]
+            },
+
+      {
+            "label": "Features",
+            "options": [
+                    {
+                        "label": "Basic",
+                        "sections": ["features"]
+                    },
+                    {
+                        "label": "Professional",
+                        "sections": ["features", "columns3"]
+                    }
+                ]
+          },
+      {
+            "label": "Gallery",
+            "options": [
+                    {
+                        "label": "Basic",
+                        "sections": ["gallery"]
+                    },
+                    {
+                        "label": "Grid",
+                        "sections": ["gallery2"]
+                    }
+                ]
+          },
+       {
+            "label": "Popup",
+        	"type": "popup",
+            "options": [
+                    {
+                        "label": "Basic",
+                      	"type":"popup",
+                        "sections": ["popup"]
+                    }
+                ]
+          },
+        {
+            "label": "Services",
+            "options": [
+                    {
+                        "label": "Basic",
+                        "sections": ["services"]
+                    },
+                    {
+                        "label": "Pro",
+                        "sections": ["columns2"]
+                    }
+                ]
+          },
+       {
+            "label": "Team",
+            "options": [
+                    {
+                        "label": "Basic",
+                        "sections": ["team"]
+                    },
+                    {
+                        "label": "Pro",
+                        "sections": ["columns4"]
+                    }
+                ]
+          },
+      {
+            "label": "Testimonials",
+            "options": [
+                    {
+                        "label": "Basic",
+                        "sections": ["testimonials"]
+                    }
+                ]
+          },
+      {
+            "label": "Why Us",
+            "options": [
+                    {
+                        "label": "Basic",
+                        "sections": ["features", "columns2"]
+                    },
+                    {
+                        "label": "Classic",
+                        "sections": ["about2", "team", "contact"]
+                    }
+                ]
+          }
+    ]
+  },
+    "sections": {
+        "about":{
+            "label": "About Us",
+            "sections":["about","about2","about-us","about3","about4","about5","about6","about7","about8","about9","about10","about11","about12","about13","about14","about15"]
+        },
+      "blog-feed":{
+            "label": "Blog",
+            "sections":["blog-feed"]
+        },
+        "columns":{
+            "label": "Columns",
+            "sections":["services","columns","columns2","columns3","columns4","columns5","columns6","columns7","columns8"]
+        },
+        "contact":{
+            "label": "Contact",
+            "sections":["contact"]
+        },
+        "counter":{
+            "label": "Counter",
+            "info": "Showcase your stats with counters",
+            "sections":["counter"]
+        },
+        "form":{
+            "label": "Form",
+            "sections":["subscribe","form","form2","form3"]
+        },
+        "faq":{
+            "label": "FAQ",
+            "sections":["faq"]
+        },
+         "image":{
+            "label": "Image",
+            "info": "Choose a section design & customize your website look",
+            "sections":["image9","image","image2","image3","image4","image5","image6","image7","image8"]
+        },
+        "footer":{
+            "label": "Footer",
+            "sections":["footer"]
+        },
+      "gallery":{
+            "label": "Gallery",
+            "sections":["gallery", "gallery2"]
+        },
+      "header":{
+            "label": "Header",
+            "sections":["header"]
+        },
+          "list":{
+            "label": "List",
+            "info": "Choose a section design & customize your website look",
+            "sections":["list","clients","team","team2","team3"]
+        },
+       "plans":{
+            "label": "Plans",
+            "sections":["plans"]
+        },
+        "slider":{
+            "label": "Slider",
+            "sections":["slider","slider2","slider3","slider4","testimonials"]
+       },
+         "text":{
+            "label": "Text",
+            "sections":["content","text","text2","text3","text4"]
+        },
+         "video":{
+            "label": "Video",
+            "sections":["video","video2","video3","video4","video5"]
+       },
+        "welcome":{
+            "label": "Welcome",
+            "sections":["welcome","welcome2","welcome3","welcome4","welcome5"]
+        }
+       
+    }
+  }

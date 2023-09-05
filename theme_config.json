@@ -1,0 +1,397 @@
+{
+    "info": {
+        "name": "Home Guard",
+        "version": "1.0.2",
+        "type": "site",
+        "author": "JoonWeb",
+        "support_url": "https:\/\/dev.joonweb.com\/themes\/template-architecture",
+        "license": "free"
+    },
+    "default": {
+        "fontUnit": "rem",
+        "fontStyle": {
+            "fontStyle1": {
+                "label": "Font Style 1",
+                "font-family": "Poppins",
+                "font-size": "4",
+                "line-height": "110%",
+                "font-weight": "bolder"
+            },
+            "fontStyle2": {
+                "label": "Font Style 2",
+                "font-family": "Poppins",
+                "font-size": "2.5",
+                "line-height": "110%",
+                "font-weight": "bolder"
+            },
+            "fontStyle3": {
+                "label": "Font Style 3",
+                "font-family": "Poppins",
+                "font-size": "1.8",
+                "line-height": "120%",
+                "font-weight": "bolder"
+            },
+            "fontStyle4": {
+                "label": "Font Style 4",
+                "font-family": "Poppins",
+                "font-size": "1.3",
+                "line-height": "120%",
+                "font-weight": "bolder"
+            },
+            "fontStyle5": {
+                "label": "Font Style 5",
+                "font-family": "Poppins",
+                "font-size": "1",
+                "line-height": "130%",
+                "font-weight": "normal"
+            },
+            "fontStyle6": {
+                "label": "Font Style 6",
+                "font-family": "Poppins",
+                "font-size": "1.5",
+                "line-height": "120%",
+                "font-weight": "normal"
+            },
+            "fontStyle7": {
+                "label": "Font Style 7",
+                "font-family": "Raleway",
+                "font-size": "1.3",
+                "line-height": "120%",
+                "font-weight": "normal"
+            },
+            "fontStyle8": {
+                "label": "Font Style 8",
+                "font-family": "Raleway",
+                "font-size": "1",
+                "line-height": "130%",
+                "font-weight": "normal"
+            },
+            "fontStyle9": {
+                "label": "Font Style 9",
+                "font-family": "Raleway",
+                "font-size": "0.875",
+                "line-height": "140%",
+                "font-weight": "normal"
+            }
+        },
+        "colors": {
+            "color1": {
+                "label": "Main Color",
+                "value": "#f87317"
+            },
+            "color2": {
+                "label": "Second Color",
+                "value": "#ffbd8f"
+            },
+            "color3": {
+                "label": "Third Color",
+                "value": "#07325f"
+            },
+            "color4": {
+                "label": "Background Color",
+                "value": "#8db5de"
+            },
+            "color5": {
+                "label": "Light Color",
+                "value": "#fff"
+            },
+            "color6": {
+                "label": "Dark Color",
+                "value": "#232323"
+            }
+        }
+    },
+    "presets": [
+        {
+            "label": "Default",
+            "set": {
+                "fontUnit": "rem",
+                "fontStyle": {
+                    "fontStyle1": {
+                        "label": "Font Style 1",
+                        "font-family": "Poppins",
+                        "font-size": "4",
+                        "line-height": "110%",
+                        "font-weight": "bolder"
+                    },
+                    "fontStyle2": {
+                        "label": "Font Style 2",
+                        "font-family": "Poppins",
+                        "font-size": "2.5",
+                        "line-height": "110%",
+                        "font-weight": "bolder"
+                    },
+                    "fontStyle3": {
+                        "label": "Font Style 3",
+                        "font-family": "Poppins",
+                        "font-size": "1.8",
+                        "line-height": "120%",
+                        "font-weight": "bolder"
+                    },
+                    "fontStyle4": {
+                        "label": "Font Style 4",
+                        "font-family": "Poppins",
+                        "font-size": "1.3",
+                        "line-height": "120%",
+                        "font-weight": "bolder"
+                    },
+                    "fontStyle5": {
+                        "label": "Font Style 5",
+                        "font-family": "Poppins",
+                        "font-size": "1",
+                        "line-height": "130%",
+                        "font-weight": "normal"
+                    },
+                    "fontStyle6": {
+                        "label": "Font Style 6",
+                        "font-family": "Poppins",
+                        "font-size": "1.5",
+                        "line-height": "120%",
+                        "font-weight": "normal"
+                    },
+                    "fontStyle7": {
+                        "label": "Font Style 7",
+                        "font-family": "Raleway",
+                        "font-size": "1.3",
+                        "line-height": "120%",
+                        "font-weight": "normal"
+                    },
+                    "fontStyle8": {
+                        "label": "Font Style 8",
+                        "font-family": "Raleway",
+                        "font-size": "1",
+                        "line-height": "130%",
+                        "font-weight": "normal"
+                    },
+                    "fontStyle9": {
+                        "label": "Font Style 9",
+                        "font-family": "Raleway",
+                        "font-size": "0.875",
+                        "line-height": "140%",
+                        "font-weight": "normal"
+                    }
+                },
+                "colors": {
+                    "color1": {
+                        "label": "Main Color",
+                        "value": "#f87317"
+                    },
+                    "color2": {
+                        "label": "Second Color",
+                        "value": "#ffbd8f"
+                    },
+                    "color3": {
+                        "label": "Third Color",
+                        "value": "#07325f"
+                    },
+                    "color4": {
+                        "label": "Background Color",
+                        "value": "#8db5de"
+                    },
+                    "color5": {
+                        "label": "Light Color",
+                        "value": "#fff"
+                    },
+                    "color6": {
+                        "label": "Dark Color",
+                        "value": "#232323"
+                    }
+                }
+            }
+        },
+        {
+            "label": "Red & Black",
+            "set": {
+                "fontUnit": "rem",
+                "fontStyle": {
+                    "fontStyle1": {
+                        "label": "Font Style 1",
+                        "font-family": "Agdasima",
+                        "font-size": "4",
+                        "line-height": "110%",
+                        "font-weight": "bolder"
+                    },
+                    "fontStyle2": {
+                        "label": "Font Style 2",
+                        "font-family": "Agdasima",
+                        "font-size": "2.5",
+                        "line-height": "110%",
+                        "font-weight": "bolder"
+                    },
+                    "fontStyle3": {
+                        "label": "Font Style 3",
+                        "font-family": "Agdasima",
+                        "font-size": "1.8",
+                        "line-height": "120%",
+                        "font-weight": "bolder"
+                    },
+                    "fontStyle4": {
+                        "label": "Font Style 4",
+                        "font-family": "Agdasima",
+                        "font-size": "1.3",
+                        "line-height": "120%",
+                        "font-weight": "bolder"
+                    },
+                    "fontStyle5": {
+                        "label": "Font Style 5",
+                        "font-family": "Agdasima",
+                        "font-size": "1",
+                        "line-height": "130%",
+                        "font-weight": "normal"
+                    },
+                    "fontStyle6": {
+                        "label": "Font Style 6",
+                        "font-family": "Agdasima",
+                        "font-size": "1.5",
+                        "line-height": "120%",
+                        "font-weight": "normal"
+                    },
+                    "fontStyle7": {
+                        "label": "Font Style 7",
+                        "font-family": "Agdasima",
+                        "font-size": "1.3",
+                        "line-height": "120%",
+                        "font-weight": "normal"
+                    },
+                    "fontStyle8": {
+                        "label": "Font Style 8",
+                        "font-family": "Agdasima",
+                        "font-size": "1",
+                        "line-height": "130%",
+                        "font-weight": "normal"
+                    },
+                    "fontStyle9": {
+                        "label": "Font Style 9",
+                        "font-family": "Agdasima",
+                        "font-size": "0.875",
+                        "line-height": "140%",
+                        "font-weight": "normal"
+                    }
+                },
+                "colors": {
+                    "color1": {
+                        "label": "Main Color",
+                        "value": "#121212"
+                    },
+                    "color2": {
+                        "label": "Second Color",
+                        "value": "#bbb"
+                    },
+                    "color3": {
+                        "label": "Third Color",
+                        "value": "#cc1010"
+                    },
+                    "color4": {
+                        "label": "Background Color",
+                        "value": "#e68d8d"
+                    },
+                    "color5": {
+                        "label": "Light Color",
+                        "value": "#fff"
+                    },
+                    "color6": {
+                        "label": "Dark Color",
+                        "value": "#232323"
+                    }
+                }
+            }
+        },
+        {
+            "label": "Purple",
+            "set": {
+                "fontUnit": "rem",
+                "fontStyle": {
+                    "fontStyle1": {
+                        "label": "Font Style 1",
+                        "font-family": "Oswald",
+                        "font-size": "4",
+                        "line-height": "110%",
+                        "font-weight": "bolder"
+                    },
+                    "fontStyle2": {
+                        "label": "Font Style 2",
+                        "font-family": "Oswald",
+                        "font-size": "2.5",
+                        "line-height": "110%",
+                        "font-weight": "bolder"
+                    },
+                    "fontStyle3": {
+                        "label": "Font Style 3",
+                        "font-family": "Oswald",
+                        "font-size": "1.8",
+                        "line-height": "120%",
+                        "font-weight": "bolder"
+                    },
+                    "fontStyle4": {
+                        "label": "Font Style 4",
+                        "font-family": "Oswald",
+                        "font-size": "1.3",
+                        "line-height": "120%",
+                        "font-weight": "bolder"
+                    },
+                    "fontStyle5": {
+                        "label": "Font Style 5",
+                        "font-family": "Oswald",
+                        "font-size": "1",
+                        "line-height": "130%",
+                        "font-weight": "normal"
+                    },
+                    "fontStyle6": {
+                        "label": "Font Style 6",
+                        "font-family": "Oswald",
+                        "font-size": "1.5",
+                        "line-height": "120%",
+                        "font-weight": "normal"
+                    },
+                    "fontStyle7": {
+                        "label": "Font Style 7",
+                        "font-family": "Vollkorn",
+                        "font-size": "1.3",
+                        "line-height": "120%",
+                        "font-weight": "normal"
+                    },
+                    "fontStyle8": {
+                        "label": "Font Style 8",
+                        "font-family": "Vollkorn",
+                        "font-size": "1",
+                        "line-height": "130%",
+                        "font-weight": "normal"
+                    },
+                    "fontStyle9": {
+                        "label": "Font Style 9",
+                        "font-family": "Vollkorn",
+                        "font-size": "0.875",
+                        "line-height": "140%",
+                        "font-weight": "normal"
+                    }
+                },
+                "colors": {
+                    "color1": {
+                        "label": "Dark Color",
+                        "value": "#8429fa"
+                    },
+                    "color2": {
+                        "label": "Light Color",
+                        "value": "#bd95f2"
+                    },
+                    "color3": {
+                        "label": "Dark Color",
+                        "value": "#910a74"
+                    },
+                    "color4": {
+                        "label": "Light Color",
+                        "value": "#b389aa"
+                    },
+                    "color5": {
+                        "label": "Text Color",
+                        "value": "#fff"
+                    },
+                    "color6": {
+                        "label": "Dark Text Color",
+                        "value": "#232323"
+                    }
+                }
+            }
+        }
+    ]
+}
