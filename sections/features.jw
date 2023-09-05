@@ -1,0 +1,45 @@
+<section class="services space {{ section.colors ? section.colors }}" id="{{section.id}}">
+    <div class="container-fluid">
+        {% if title or description %}
+        <div class="row d-flex justify-content-center">
+         <div class="col-lg-8 col-md-12 col-sm-12">
+            <div class="main-heading text-center">
+                {% if title %}<div class="main-title fontStyle2 mb-2">{{ title }}</div>{% endif %}
+                {% if description %}<div class="main-subtitle fontStyle8 content_data">{{ description }}</div>{% endif %} 
+            </div>
+         </div> 
+        </div>
+        {% endif %}
+
+        {% if listitem %}
+            <div class="row gy-4 {% if listitem | length < 3 %}justify-content-center{% endif %}">
+                {% for item in listitem %}
+                    <div class="col-lg-4 col-md-6 col-sm-6 col-6">
+                        <div class="services_style">
+                            {% if item.item_media %}
+                                <img src="{{ item.item_media }}" alt="{{ item.item_media.alt }}">
+                            {% endif %}
+                            
+                            {% if item.item_name %}<div class="fontStyle4 my-2">{{ item.item_name }}</div>{% endif %}
+                            {% if item.item_description %}<div class="fontStyle8 my-2 content_data">{{ item.item_description }}</div>{% endif %}
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+        {% endif %}
+
+      </div> 
+   </section>
+  
+   <style>
+     .services_style{padding: 2rem; transition: all 0.4s linear;}
+     .services_style:hover{transform: scale(0.95); border: 1px solid var(--color2);}
+     .services_style{border: 1px solid rgb(228, 228, 228);}
+     .services_style img{width:20%; object-fit: cover; margin-bottom: 0.7rem;}
+     
+     @media(max-width:516px){
+       .services_style img{width:50%;}
+       .services_style{padding: 1rem;}
+     }
+   </style>
+  

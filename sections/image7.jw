@@ -1,0 +1,22 @@
+<section class="basic m-4 {{ section.colors ? section.colors }}" id="{{section.id}}">
+    <div class="container">
+        <div class="basic-content">
+            <div class="row gy-3 {% if media and media2 %}justify-content-between{% else %}justify-content-center{% endif %}">
+              {% if media %}
+                <div class="col-md-6">
+                    <div class="basic-media2 media-radius2">
+                        <img src="{{ media }}" class="" alt="{{ media.alt }}">
+                    </div>
+                </div>
+              {% endif %}
+              {% if media2 %}
+                <div class="col-md-6">
+                    <div class="basic-media2 media-radius2">
+                        <img src="{{ media2 }}" class="" alt="{{ media2.alt }}">
+                    </div>
+                </div>
+              {% endif %}
+            </div>
+        </div>
+    </div>
+</section>

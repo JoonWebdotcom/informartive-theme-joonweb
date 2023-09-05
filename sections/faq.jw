@@ -1,0 +1,64 @@
+<section class="faq space {{ section.colors ? section.colors }}" id="{{section.id}}">
+    <div class="m-container">
+        {% if title or description %}
+            <div class="row d-flex justify-content-center">
+                <div class="col-lg-8 col-md-12 col-sm-12">
+                    <div class="main-heading text-center">
+                        {% if title %}<div class="main-title fontStyle2 mb-2">{{ title }}</div>{% endif %}
+                        {% if description %}<div class="main-subtitle fontStyle8">{{ description }}</div>{% endif %} 
+                    </div>
+                </div>
+            </div>
+        {% endif %}
+
+        {% if listitem %}
+            <div class="row gy-5 d-flex align-items-center justify-content-center">
+                <div class="col-lg-10 col-md-12 col-sm-12">
+                    <div class="faq_style"> 
+                        <div class="accordion" id="accordionExample{{section.id}}">
+
+                            {% for key, item in listitem %}
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="heading{{section.id}}One{{ key }}">
+                                    <button class="accordion-button fontStyle4 background2" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapse{{section.id}}One{{ key }}" {% if key == 0 %}aria-expanded="true"{% else %}aria-expanded="false"{% endif %} 
+                                    aria-controls="collapseOne">
+                                        {{ item.question }}
+                                    </button>
+                                    </h2>
+                                    <div id="collapse{{section.id}}One{{ key }}" class="accordion-collapse collapse {% if key == 0 %}show{% endif %} fontStyle8"
+                                    aria-labelledby="heading{{section.id}}One{{ key }}" data-bs-parent="#accordionExample{{section.id}}">
+                                    <div class="accordion-body">
+                                        {{ item.answer }}
+                                    </div>
+                                    </div>
+                                </div>
+                            {% endfor %}
+                        
+                        </div>
+                
+                    </div>
+                </div> 
+            </div>
+        {% endif %}
+
+    </div> 
+   </section>
+  
+<style>
+     .m-container {width: 90%;margin: auto;padding: 0 10px;}
+     .faq{padding:4rem 0;}
+     .faq_header{margin-bottom: 1.5rem;}
+     .faq_img img{width:100%; aspect-ratio: 1/1; object-fit: cover;}
+     .accordion-button:not(.collapsed) {
+     color: var(--color5);
+     background-color: var(--color2); 
+     box-shadow: inset 0 calc(-1 * var(--bs-accordion-border-width)) 0 var(--bs-accordion-border-color);}
+    .faq .accordion-button::after{display: none;}
+    .accordion-item:first-of-type
+    .accordion-button {
+      border-top-left-radius: var(--bs-accordion-inner-border-radius);
+      border-top-right-radius: var(--bs-accordion-inner-border-radius);
+      border-radius: 0;
+  }
+</style>

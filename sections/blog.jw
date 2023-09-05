@@ -1,0 +1,78 @@
+<section class="blog space {{ section.colors ? section.colors }}" id="{{section.id}}">
+    <div class="container-fluid">
+      {% if blog.items %}
+      
+        {% if title or description %}
+            <div class="row d-flex justify-content-center">
+                <div class="col-lg-8 col-md-12 col-sm-12">
+                    <div class="main-heading text-center">
+                        {% if title %}<div class="main-title fontStyle2 mb-2">{{ title }}</div>{% endif %}
+                        {% if description %}<div class="main-subtitle fontStyle8">{{ description }}</div>{% endif %}
+                    </div>
+                </div> 
+            </div>
+        {% endif %}
+
+        
+            <div class="row gy-4 {% if blog.items | length < 3 %}justify-content-center{% endif %}">
+
+                {% set dataLimit = 12 %}
+                {% set dataTotal = blog.items | length %}
+                {% set blogpagination = blog.items|paginate(dataLimit, (query.page ? query.page : 1)) %}
+              
+                {% for itemkey, blog in blogpagination %}
+                    <div class="col-lg-4 col-md-6 col-sm-12 _smart_list_link">
+                        <div class="blog_style">
+                        <div class="blog_img">
+                            <a href="{{ blog.url }}"><img src="{{ blog.img }}" alt="{{ blog.img.alt }}" 
+                              onerror="this.src='https://static.joonsite.com/storage/2246/media/im8.jpg'"></a>
+                            <div class="blog_img_text"></div>
+                        </div>
+                         
+                        <div class="blog_text background5 {{ section.colors2 ? section.colors2 }}">
+                        <div class="blog_socel">
+                            <div class="blog_socel_1 fontStyle9"><i class="fa-solid fa-calendar-days me-2"></i>{{ blog.created | date("d-m-y") }}</div>
+                            <div class="blog_socel_1 ms-3 fontStyle9"><i class="fa-regular fa-heart me-2"></i>{{ blog.author }}</div>
+                        </div>
+                        {% if blog.title %}<div class="blog_title fontStyle4 mb-3 word_limit_2"><a href="{{ blog.url }}">{{ blog.title }}</a></div>{% endif %}
+                        {% if blog.description %}<div class="blog_dec fontStyle8 word_limit_3">{{ blog.description }}</div>{% endif %}
+                        <a href="{{ blog.url }}" class="blog_btn fontStyle9 mt-3">Read More <i class="fa-solid fa-angles-right  ms-1 "></i></a>
+                        </div>
+                        </div>
+                    </div>
+                {% endfor %}
+
+                {% import "components/pagination.jw" as pagination %}
+                {% set total_page =  ((dataTotal - 1) / dataLimit) + 1 %}
+                {{ pagination.pagination( total_page | ceil , ( query.page ?query.page : 1 )) }}
+            
+            </div>
+      
+      	{% else %}
+      		<div class="top-box text-center py-4">
+          <div class="svg-cart mb-3">
+            <svg width="100px" height="100px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="24" height="24" fill="white"/>
+  <path fill-rule="evenodd" clip-rule="evenodd" d="M2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12ZM9 11.5C9 10.1193 10.1193 9 11.5 9C12.8807 9 14 10.1193 14 11.5C14 12.8807 12.8807 14 11.5 14C10.1193 14 9 12.8807 9 11.5ZM11.5 7C9.01472 7 7 9.01472 7 11.5C7 13.9853 9.01472 16 11.5 16C12.3805 16 13.202 15.7471 13.8957 15.31L15.2929 16.7071C15.6834 17.0976 16.3166 17.0976 16.7071 16.7071C17.0976 16.3166 17.0976 15.6834 16.7071 15.2929L15.31 13.8957C15.7471 13.202 16 12.3805 16 11.5C16 9.01472 13.9853 7 11.5 7Z" fill="var(--color1)"/>
+  </svg>
+          </div>
+            <div class="fontStyle2 sub mb-2">No blog found!</div>
+            <div class="para fontStyle5">Looks like you haven't added any blogs.</div>
+        </div>
+        {% endif %}
+       </div> 
+   </section> 
+  
+   <style>
+      .blog_img{overflow: hidden;}
+      .blog_img:hover img{transform: scale(1.1);}
+     .blog_img img{width:100%; height:300px; object-fit: cover; transition: all 0.4s linear;}
+     .blog_socel{display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;}
+     .blog_title a{color: unset; color: var(--color2);}
+     .blog_btn{color: unset; display: inline-block;}
+     .blog_text{padding: 1rem; }
+     .blog_style{box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;}
+     @media(max-width:516px){
+       .blog_img img{height:220px;}
+     }
+   </style>

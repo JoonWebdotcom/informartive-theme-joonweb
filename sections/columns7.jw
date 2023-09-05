@@ -1,0 +1,69 @@
+<section class="section-padding {{ section.colors ? section.colors }}" id="{{section.id}}">
+        <div class="container">
+          {% if title or media or description %}
+            <div class="text-center column-heading mg-3">
+                {% if title %}<div class="fontStyle2 mg-0">{{ title }}</div>{% endif %}
+                {% if media %}
+                  <div class="column-media mg-1">
+                      <img src="{{ media }}" alt="{{ media.alt }}">
+                  </div>
+                {% endif %}
+              
+                {% if description %}
+                <div class="content_data fontStyle5 mg-2">{{ description }}</div>
+              {% endif %}
+              
+              {% if button %}
+              <div class="about-button">
+                {% for key, btn in button %}
+                <a href="{{ btn.href }}" target="{{ btn.target }}" 
+                   class="{% if key == 0 %}primary-btn{% else %}secondary-btn{% endif %}">{{ btn.label }}</a>
+                {% endfor %}
+              </div>
+              {% endif %}
+              
+            </div>
+           {% endif %}
+          
+          {% if listitem %}
+            <div class="columns-content background2 px-2 py-5 border-radius-2">
+
+                <div class="row gy-3 {% if listitem | length < 4 %}justify-content-center{% endif %}">
+                    {% for item in listitem %}
+                        <div class="col-sm-6 col-md-4 col-lg-3 _smart_list_link">
+                            <div class="column-item">
+                              {% if item.item_media %}
+                                    <div class="column-icon-media mg-1">
+                                        <img src="{{ item.item_media }}" alt="{{ item.item_media.alt }}">
+                                    </div>
+                                  {% endif %}
+                              
+                              {% if item.item_name %}
+                                  <div class="fontStyle3 mg-0">{{ item.item_name }}</div>
+                             {% endif %}
+                                  
+                          {% if item.item_description %}
+                          		<div class="fontStyle5 mg-1 col-text-width">{{ item.item_description }}
+                          		</div>
+                          {% endif %}
+                          
+                             {% if item.item_button %}
+                                <div class="column-button">
+                                  {% for key, btn in item.item_button %}
+                                  <a href="{{ btn.href }}" target="{{ btn.target }}" 
+                                     class="fontStyle5">{{ btn.label }}</a>
+                                  {% endfor %}
+                                </div>
+                             {% endif %}
+                              
+                             
+                            </div>
+                        </div>
+                  {% endfor %}
+                </div>
+              
+            </div>
+          {% endif %}
+          
+        </div>
+    </section>

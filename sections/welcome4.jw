@@ -1,0 +1,21 @@
+<section class="welcome_1 background3 {{ section.colors ? section.colors }}" id="{{section.id}}">
+    <div class="container">
+      {% if title or description or button %}
+        <div class="row d-flex justify-content-center align-items-center"> 
+          <div class="col-lg-6 col-md-10 col-sm-12">
+            <div class="text-center welcome_texts">
+              {% if title %}<div class="fontStyle2 mg-1">{{ title }}</div>{% endif %}
+              {% if description %}<div class="content_data fontStyle5 mg-2">{{ description }}</div>{% endif %}
+              {% if button %}
+                <div class="">
+                    {% for key, btn in button %}
+                      <a href="{{ btn.href }}" target="{{ btn.target }}" class="{% if key == 0 %}primary-btn{% else %}secondary-btn {% endif %} fontStyle5">{{ btn.label }}</a>
+                    {% endfor %}
+                </div>
+              {% endif %}
+            </div>
+          </div> 
+        </div>
+      {% endif %}
+    </div>   
+   </section>

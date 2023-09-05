@@ -1,0 +1,38 @@
+<section class="section-padding {{ section.colors ? section.colors }}" id="{{section.id}}">
+    <div class="container-fluid">
+      {% if title or description or media or button %}
+      <div class="row d-flex gy-4 center-width {% if (title or button) and (media or description) %}justify-content-between{% else %}justify-content-center{% endif %}">
+        
+        {% if title or button %}
+        <div class="col-md-6 col-sm-12">
+          <div class="text-wrap">
+            {% if title %}<div class="fontStyle2 mg-2">{{ title }}</div>{% endif %}
+          {% if button %}
+                  <div class="text-button">
+                      {% for key, btn in button %}
+                        <a href="{{ btn.href }}" target="{{ btn.target }}" 
+                            class="fontStyle5 {% if key == 0 %}primary-btn{% else %}secondary-btn {% endif %}">{{ btn.label }}</a>
+                      {% endfor %}
+                </div>
+            {% endif %}
+            </div>
+          </div>
+        {% endif %}
+
+          {% if media or description %}
+          <div class="col-md-6 col-sm-12">
+            {% if media %}
+                <div class="mg-2 text-wrap text-media"><img src="{{media}}" alt="{{media.alt}}"></div>
+            {% endif %}
+            
+            {% if description %}<div class="content_data fontStyle5 mg-2">{{ description }}</div>{% endif %}
+
+          </div>
+          {% endif %}
+          
+        </div>
+      {% endif %}
+
+     </div> 
+
+</section>

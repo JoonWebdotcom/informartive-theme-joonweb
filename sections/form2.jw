@@ -1,0 +1,23 @@
+<section class="form_1" id="{{section.id}}">
+    <div class="container-fluid background3 {{ section.colors ? section.colors }} py-5">
+       <div class="row d-flex justify-content-center align-items-center"> 
+       <div class="col-lg-6 col-md-10 col-sm-12">
+        <div class="form_1_div background5 {{ section.colors2 ? section.colors2 }} p-lg-5 p-md-5 p-sm-4 p-4">
+          {% if title or description %}  
+          <div class="mb-4">
+              	{% if title %}<div class="fontStyle2 mg-1">{{ title }}</div>{% endif %}
+          		{% if description %}<div class="fontStyle5">{{ description }}</div>{% endif %}
+            </div>
+          {% endif %}
+          
+             {% if form %}
+                 <div class="form_form_style">
+                   {{ form }}
+                 </div>
+             {% endif %}
+          
+           </div>
+       </div> 
+     </div>
+    </div>
+   </section>

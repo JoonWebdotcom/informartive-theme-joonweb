@@ -1,0 +1,98 @@
+<section class="testimonials space {{ section.colors ? section.colors }}" id="{{section.id}}">
+    <div class="container-fluid">
+        {% if title or description %}
+            <div class="row d-flex justify-content-center">
+                <div class="col-lg-8 col-md-12 col-sm-12">
+                    <div class="main-heading main-heading2 text-center ">
+                        {% if title %}<div class="main-title fontStyle2 mb-2">{{ title }}</div>{% endif %}
+                        {% if description %}<div class="main-subtitle fontStyle8 content_data">{{ description }}</div>{% endif %}
+                    </div>
+                </div> 
+            </div> 
+        {% endif %}
+
+        {% if listitem %}
+         <div class="slider_1">
+            {% for key, item in listitem %}
+                <div class="testimonials_style background2 {{ section.colors2 ? section.colors2 }}">
+                    <div class="testimonials_img">
+                        {% if item.item_media %}
+                            <img src="{{ item.item_media }}" alt="{{ item.item_media.alt }}"> 
+                        {% endif %}
+
+                      {% if item.item_name or item.item_subtitle %}
+                        <div class="testimonials_text ms-3">
+                            {% if item.item_name %}<div class="testimonials_title fontStyle4">{{ item.item_name }}</div>{% endif %}
+                            {% if item.item_subtitle %}<span class="testimonials_subtitle fontStyle5">{{ item.item_subtitle }}</span>{% endif %}
+                        </div> 
+                       {% endif %}
+                    </div>
+                  
+                    {% if item.item_description %}<div class="testimonials_t fontStyle8 content_data">{{ item.item_description }}</div>{% endif %}
+                </div>
+            {% endfor %}
+       
+         </div>
+        {% endif %}
+    </div>
+   </section>
+  
+<style>
+  .slick-initialized .slick-slide{height:auto;}
+.testimonials_style{ margin:1rem; padding:2rem; text-align: center; border: 1px solid rgb(223, 223, 223);}
+.testimonials_img{display: flex; justify-content:center; align-items: center; margin-bottom:1rem;}
+.testimonials_img img{width:70px; height: 70px; border-radius: 50%; object-fit: cover;}
+.testimonials_icons i{color: gold; margin:0 0.1rem;}
+.testimonials .slick-dots .slick-active{background-color:var(--color1); height:10px; width:10px; transition: all 0.4s ease-in-out;}
+.testimonials .slick-dots button{border: none;}
+.testimonials .slick-dots li{ background-color: var(--color2); border-radius: 2rem; height:10px; width:10px; display: inline-block; font-size: 0px; margin: 0 0.3rem; cursor: pointer;}
+.testimonials .slick-dots{ bottom: -20%;}
+.testimonials .slick-dots li.slick-active button:before{color:unset;}
+.testimonials .slick-dots li button:before{color:unset;}
+.testimonials .slick-next{ top: 50%;right:-3%;}
+.testimonials .slick-prev{ top:50%; left:-3%; }
+.testimonials .slick-prev::before{font-family: FontAwesome; font-size:normal; content: '\f104';  font-size: 1.2rem; transition: all 0.4s linear; color: var(--color6);}
+.testimonials .slick-next::before{ font-family: FontAwesome; font-size:normal; content: '\f105';  font-size: 1.2rem;  transition: all 0.4s linear; color: var(--color6);}
+.testimonials .slick-prev,.slick-next{position: absolute;width:50px;font-size:0.1px;z-index:1;}
+@media (max-width:991px) {
+.testimonials{padding-bottom: 5rem; }
+.testimonials_style{padding: 1rem;}
+.testimonials .slick-next{ top: 50%;right:-3%;}
+.testimonials .slick-prev{ top:50%; left:-3%;}}
+
+@media (max-width:576px) {
+  .testimonials{padding-bottom: 2rem; }
+.testimonials .slick-next{ top:50%;right:-7%;}
+.testimonials .slick-prev{ top:50%; left:-7%;}
+  }
+  
+  @media(max-width:516px){
+  .main-heading2{margin-bottom:1rem !important;}
+}
+</style>
+
+<script>
+    $('#{{section.id}} .slider_1').slick({
+     infinite: true,
+     speed: 300,
+     autoplaySpeed: 2000,
+     slidesToShow: {{ section.slider.slidesToShow ? section.slider.slidesToShow: '2' }},
+     slidesToScroll: 1,
+     dots: {{ (section.slider.dots == 'no')?'false':'true' }},
+     arrows: {{ (section.slider.arrows == 'yes')?'true':'false' }},
+     autoplay:{{ (section.slider.autoplay == 'no')?'false':'true' }},
+     responsive: [
+       {
+         breakpoint: 512,
+         settings: {
+            autoplay:{{ (section.mobileSlider.autoplay == 'no')?'false':'true' }},
+            arrows: {{ (section.mobileSlider.arrows == 'yes')?'true':'false' }},
+            dots: {{ (section.mobileSlider.dots == 'no')?'false':'true' }},
+            slidesToShow: {{ section.mobileSlider.slidesToShow ? section.mobileSlider.slidesToShow: '1' }},
+            slidesToScroll: 1
+         }
+       }
+
+     ]
+   });
+</script>

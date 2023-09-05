@@ -1,0 +1,20 @@
+<section class="banner background5 {{ section.colors ? section.colors }}" id="{{section.id}}" 
+style="{% if background %}background-image: url('{{ background }}');{% endif %}background-repeat: no-repeat; background-size: cover; width:100%; min-height:300px; display: flex;  align-items: center; background-attachment: fixed; ">
+    <div class="container-fluid">
+      <div class="row d-flex justify-content-center">
+       <div class="col-lg-6 col-md-10 col-sm-12">
+         <div class="banner_style text-center">
+            {% if title %}<div class="fontStyle2 mb-2">{{ title }}</div>{% endif %}
+            {% if description %}<div class="fontStyle8 content_data">{{ description }}</div>{% endif %}
+            {% if button %}
+                <div class="mt-5">
+                    {% for key, btn in button %}
+                        <a href="{{ btn.href }}" target="{{ btn.target }}" class="btn fontStyle8"><span>{{ btn.label }}</span></a>
+                    {% endfor %}
+                </div>
+            {% endif %}
+         </div>
+       </div>
+      </div>
+    </div>
+   </section>

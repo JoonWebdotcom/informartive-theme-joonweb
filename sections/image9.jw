@@ -1,0 +1,25 @@
+<section class="welcome-section {{ section.colors ? section.colors }}" id="{{section.id}}">
+  {% if media or media2 %}
+    <div class="welcome-media position-relative">
+      {% if media %}
+        <figure class="service-card-img desk">
+        <img src="{{ media }}" alt="{{ media.alt }}">
+        </figure>
+      {% endif %}
+      {% if media2 %}
+        <figure class="service-card-img mob">
+        <img src="{{ media2 }}" alt="{{ media2.alt }}">
+        </figure>
+      {% endif %}
+      
+    </div>
+  {% endif %}
+</section>
+<style>
+.welcome-section .service-card-img.mob{display: none;}
+.welcome-section img{width: 100%;}
+@media(max-width:992px){
+  .welcome-section .service-card-img.mob{display: block !important;}
+  .welcome-section .service-card-img.desk{display: none;}
+}
+</style>

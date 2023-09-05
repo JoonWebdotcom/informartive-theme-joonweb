@@ -1,0 +1,133 @@
+{% set logo_size_classes = {
+  "xs": "see-xsm-logo",
+  "s": "see-sm-logo",
+  "m": "see-medium-logo",
+  "l": "see-large-logo",
+  "xl": "see-extra-large-logo"
+} %}
+
+{% set logo_class = logo_size_classes[Property.logo.size] ?? '' %}
+
+<footer class=" footer background3 {{ section.colors ? section.colors }}" id="{{section.id}}">
+    <div class="container-fluid">
+     <div class="row gy-4 space">
+
+      {% if logo or title or subtitle or button  %}
+        <div class="{% if section.columns %}col-lg-3{% else %}col-lg-6{% endif %} col-md-6 col-sm-12">
+          <div class="footer_style">
+            {% if logo %}<div class="{{logo_class ? logo_class : 'default-size'}}">
+            <img src="{{ logo }}" alt="{{ logo.alt }}" class="footer_icon"></div>{% endif %}
+            {% if title %}<div class="footer_title fontStyle2 mb-3 {{logo_class ? logo_class : 'default-size'}}">{{ title }}</div>{% endif %}
+            {% if subtitle %}<div class="footer_dec fontStyle8">{{ subtitle }}</div>{% endif %}
+            {% if button %}
+              <div class="mt-4">
+                {% for btn in button %}
+                  <a href="{{ btn.href }}" target="{{ btn.target }}" class="primary-2_btn fontStyle8">{{ btn.label }}</a>
+                {% endfor %}
+              </div>
+            {% endif %}
+          </div>
+        </div>
+      {% endif %}
+   
+      {% if section.columns %}
+          {% for items in section.columns %}
+            <div class="{% if section.columns | length > 1 %}col-lg-3 col-md-3{% else %}col-lg-3 col-md-3{% endif %} col-sm-6 col-6">
+              <div class="footer_style footer_main">
+                <div class="fontStyle4 mb-4">{{items.heading}}</div>
+                <ul class="footer_list">
+                  {% if items.type == 'menu' and items.links %}
+                    {% for links in items.links %}
+                      <li class="footer_item"><a href="{{links.url}}" class="fontStyle8">{{links.title}}</a></li>
+                    {% endfor %}
+                  {% endif %}
+                </ul>
+              </div>
+            </div>
+          {% endfor %}
+        {% endif %}
+  
+     {% if address or phone or email or social %}
+     <div class="{% if section.columns %}col-lg-3{% else %}col-lg-6{% endif %} col-md-6 col-sm-12">
+       <div class="footer_style">
+            {% if address %}
+              {% for i, item in site.address %}
+         		{% if Property.addess.value[i] != 'no' %}
+                  <div class="footer-address">
+                    <a href="" class="fontStyle8"><i class="fa-solid fa-map me-2"></i> {{ item.data }}</a>
+                  </div>
+         		{% endif %}
+              {% endfor %}
+            {% endif %}
+
+            {% if phone %}
+              {% for i, item in site.phone %}
+         		{% if Property.phone.value[i] != 'no' %}
+                  <div class="footer-address">
+                      <a href="tel:{{ item.data }}" class="fontStyle8"><i class="fa-solid fa-phone me-2"></i> {{ item.data }}</a>
+                  </div>
+        		{% endif %}
+              {% endfor %}
+            {% endif %}
+
+           {% if email %}
+              {% for i, item in site.email %}
+         		{% if Property.email.value[i] != 'no' %}
+                  <div class="footer-address">
+                    <a href="mailto:{{ item.data }}" class="fontStyle8"><i class="fa-solid fa-envelope me-2"></i> {{ item.data }}</a>
+                  </div>
+         		{% endif %}
+              {% endfor %}
+            {% endif %}
+       </div>
+
+       {% if social %}
+          <div class="footer_icons">
+            {% for item in social %}
+              <a href="{{ item.href }}" class="fontStyle8">{{ item.icon }}</a>
+            {% endfor %}
+          </div>
+       {% endif %}
+     </div> 
+     {% endif %}
+   
+     </div>  
+
+    </div>  
+    {% if copyright or powered %}
+        <div class="row">
+          <div class="col-md-12 px-0 p-0">
+            <div class="footer_copy d-flex justify-content-between background6 p-3 px-lg-5 px-md-5 px-sm-0 px-0">
+              {% if copyright %}<div class="fontStyle8">{{ copyright }}</div>{% endif %}
+              {% if powered %}<div class="fontStyle8">{{ site.powered }}</div>{% endif %}
+            </div>
+          </div>
+        </div>
+      {% endif %}
+   </footer>
+  
+   
+   <style>
+     .footer_list{padding-left:0.5rem;}
+      .footer_list .footer_item{margin-bottom: 0.6rem; transition: all 0.4s linear;} 
+      .footer_item:hover{color: var(--color1);}
+      .footer_list .footer_item a{color: unset;}
+      .footer-address{margin-bottom: 0.6rem;}
+      .footer-address a{color: unset; transition: all 0.4s linear;}
+      .footer-address a:hover{color: var(--color1);}
+      .footer_icons{margin-top: 1.5rem;}
+      .footer_icons a{color: unset; margin: 0 0.2rem; transition: all 0.4s linear;}
+      .footer_icons a i{height: 50px; width:50px; line-height: 50px; text-align: center; background-color: var(--color5); color: var(--color6); transition: all 0.4s linear;}
+      .footer_icons a i:hover{transform: scale(0.9); background-color: var(--color6); color: var(--color5);}
+      /* .footer_icons a:hover{color: var(--color1);} */
+      .footer_copy{text-align:center; margin-top: 2rem;}
+      .footer_icon{ height:70px; width: auto; object-fit: cover; margin-bottom: 1rem;}
+      .footer_main{margin-left: 4rem;}
+      @media (max-width:576px) {
+        .footer_style .footer_list{padding-left: 0;}
+        .footer_main{margin-left: 0rem;}
+        .footer_copy{flex-direction:column;}
+      }
+   
+   </style>
+  

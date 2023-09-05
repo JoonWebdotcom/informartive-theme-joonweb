@@ -1,0 +1,24 @@
+<section class="welcome_1 {{ section.colors ? section.colors }}" id="{{section.id}}">
+    <div class="container">
+      {% if title or description or media %}
+        <div class="row gy-4 d-flex align-items-center {% if (title or description) and (media) %}justify-content-between{% else %}justify-content-center{% endif %}"> 
+          {% if title or description %}
+            <div class="col-md-6 order-lg-0 order-md-1 order-sm-1 order-1">
+              <div class="">
+                  {% if title %}<div class="fontStyle2 mg-1">{{ title }}</div>{% endif %}
+                  {% if description %}<div class="content_data fontStyle5">{{ description }}</div>{% endif %}
+              </div>
+            </div>
+          {% endif %}
+
+          {% if media %}
+            <div class="col-md-6 p-0 order-lg-1 order-md-0 order-sm-0 order-0">
+              <div class="welcome_1_img">
+                <img src="{{ media }}" alt="{{ media.alt }}">
+              </div> 
+            </div>
+          {% endif %}
+        </div>
+      {% endif %}
+    </div>
+</section>

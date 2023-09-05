@@ -1,0 +1,11 @@
+<section class="basic section-padding {{ section.colors ? section.colors }}" id="{{section.id}}">
+    <div class="container">
+        <div class="basic-content text-center">
+            {% if media %}
+              <div class="basic-media">
+                  <img src="{{ media }}" alt="{{ media.alt }}">
+              </div>
+            {% endif %}
+        </div>
+    </div>
+</section>

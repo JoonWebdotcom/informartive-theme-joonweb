@@ -1,0 +1,44 @@
+<section class="section-padding {{ section.colors ? section.colors }}" id="{{section.id}}">
+        <div class="container">
+          {% if title or description or media or button %}
+            <div class="video-content">
+                <div class="row {% if (media) and (title or description or button) %}justify-content-between{% else %}justify-content-center{% endif %}">
+                  
+                  {% if media %}
+                    <div class="col-md-6 d-flex flex-column justify-content-center">
+                      	
+                      <div class="video-media2 mg-1">
+                        <iframe src="{{ media }}" title="{{media.alt}}" frameborder="0" 
+                          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                          allowfullscreen></iframe>
+                      </div>
+                          
+                      </div>
+                    {% endif %}
+                  
+                    {% if title or description or button %}
+                      <div class="col-md-6 d-flex flex-column justify-content-center">
+                        {% if title %}
+                          <div class="fontStyle2 mg-1">{{ title }}</div>
+                        {% endif %}
+                        
+                        {% if description %}
+                          <div class="content_data fontStyle5 mg-2">{{ description }}</div>
+                        {% endif %}
+                        
+                        {% if button %}
+                          <div class="video-button mg-2">
+                            {% for key, btn in button %}
+                              <a href="{{ btn.href }}" target="{{ btn.target }}" class="fontStyle5 {% if key == 0 %}primary-btn{% else %}secondary-btn {% endif %}">{{ btn.label }}</a>
+                            {% endfor %}
+                          </div>
+                        {% endif %}
+                        
+                      </div>
+                    {% endif %}
+                </div>
+                
+            </div>
+          {% endif %}
+        </div>
+    </section> 

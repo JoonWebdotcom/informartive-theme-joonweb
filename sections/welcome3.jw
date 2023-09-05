@@ -1,0 +1,38 @@
+<section class="welcome_1 background6 {{ section.colors ? section.colors }}" id="{{section.id}}">
+ <div class="container-fluid">
+  <div class="row">
+    {% if title or media or description or button %}
+   <div class="col-md-12 p-0">
+    <div class="welcome_1_img">
+      {% if media %}
+     	<img src="{{ media }}" alt="{{ media.alt }}">
+      {% endif %}
+
+      {% if title or description or button %}
+        <div class="welcome_1_text welcome_1_text2 {{ section.colors2 ? section.colors2 }}">
+        {% if title %}<div class="fontStyle2 mg-1">{{ title }}</div>{% endif %}
+        {% if description %}<div class="content_data fontStyle5 mg-2">{{ description }}</div>{% endif %}
+          {% if button %}
+            <div class="">
+                {% for key, btn in button %}
+                  <a href="{{ btn.href }}" target="{{ btn.target }}" class="{% if key == 0 %}primary-btn{% else %}secondary-btn {% endif %} fontStyle5">{{ btn.label }}</a>
+                {% endfor %}
+            </div> 
+          {% endif %}
+        </div>
+      {% endif %}
+    </div>
+   </div>
+    {% endif %}
+  </div>  
+ </div>   
+</section>
+
+<style>
+  .welcome_1_text2{width:80%;}
+  
+  @media(max-width:768px){
+    .welcome_1_text2{width:100%;}
+  }
+
+</style>

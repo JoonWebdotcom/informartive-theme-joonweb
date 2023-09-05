@@ -1,0 +1,42 @@
+<section class="subscribe background6 {{ section.colors ? section.colors }}" id="{{section.id}}"
+ style="{% if background %}background-image:  url('{{ background }}');{% endif %} background-repeat: no-repeat; background-size: cover; width:100%; min-height:300px; display: flex; align-items: center; background-attachment: fixed;">
+    <div class="container-fluid">
+     <div class="row gy-4 d-flex align-items-center justify-content-center">
+        {% if title or description %}
+            <div class="col-lg-6 col-md-10 col-sm-12">
+                <div class="subscribe_text">
+                    {% if title %}<div class="fontStyle2 mb-2">{{ title }}</div>{% endif %}
+                    {% if description %}<div class="fontStyle8">{{ description }}</div>{% endif %}
+                </div> 
+            </div> 
+        {% endif %} 
+
+        {% if form %}
+            <div class="col-lg-5 col-md-10 col-sm-12  ">
+                <div class="subscribe_form">
+                    {{ form }}
+                </div>
+            </div>
+        {% endif %}
+     </div> 
+    </div>
+   </section>
+  
+   <style>
+     .subscribe_form .dynamicField{flex:1 1 auto;}       
+  .subscribe_form form { display: flex;justify-content:space-between;align-items: center;padding: 0.3rem; background: var(--color5);}
+  .subscribe_form form input{width: 100%;}
+  .subscribe_form form input[type=submit]{border: none;outline: none;padding: 0.8rem 3rem;background: var(--color1);color: var(--color5);}
+  .subscribe_form form input{padding: 0.8rem 1rem;border: none;outline: none;background: transparent;}
+  @media (max-width:991px) {
+    .subscribe_text{text-align: center;}
+ }
+ @media(max-width:576px){.subscribe_form form input[type=submit] {
+    border: 0;
+    outline: 0;
+    padding: 0.8rem 2rem;
+    background: var(--color2);
+    color: var(--color5);
+}}
+   </style>
+

@@ -1,0 +1,60 @@
+<section class="slider_22 {{ section.colors ? section.colors }}" id="{{section.id}}">
+    <div class="container-fluid">
+      {% if listitem %}
+     		<div class="row">
+         		<div class="slide_first p-0">
+           			{% for key, item in listitem %}
+             			<div class="slide_img_2">
+                         {% if item.item_media %}<img src="{{ item.item_media }}" alt="{{ item.item_media.alt }}">{% endif %}
+                          
+                         {% if item.item_name or item.item_description or item.item_button %}
+                          <div class="slider_2_text background5 {{ section.colors2 ? section.colors2 }}">
+                            {% if item.item_name %}<div class="fontStyle2 mg-1">{{ item.item_name }}</div>{% endif %}
+                            {% if item.item_description %}<div class="fontStyle5 mg-2">{{ item.item_description }}</div>{% endif %}
+                            
+                              {% if item.item_button %}
+                                  <div class="slider-button">
+                                      {% for key, btn in item.item_button %}
+                                          <a href="{{ btn.href }}" target="{{ btn.target }}" 
+                                            class="fontStyle5 {% if key == 0 %}primary-btn{% else %}secondary-btn {% endif %}">{{ btn.label }}</a>
+                                      {% endfor %}
+                                  </div>
+                            {% endif %}
+                            
+                          </div>
+                         {% endif %}
+                       </div>
+                  	{% endfor %}
+         		</div>
+     		</div>
+      {% endif %}
+    </div> 
+   </section>
+   
+
+<script>
+
+    $('#{{section.id}} .slide_first').slick({
+      infinite: true,
+      speed: 300,
+      autoplaySpeed: 2000,
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      autoplay: {{ (section.slider.autoplay == 'no')?'false':'true' }},
+      dots:{{ (section.slider.dots == 'yes')?'true':'false' }},
+      arrows:{{ (section.slider.arrows == 'no')?'false':'true' }},
+      responsive: [
+          {
+            breakpoint: 512,
+            settings: {
+              autoplay: {{ (section.mobileSlider.autoplay == 'no')?'false':'true' }},
+              dots:{{ (section.mobileSlider.dots == 'no')?'false':'true' }},
+              arrows:{{ (section.mobileSlider.arrows == 'no')?'false':'true' }},
+              slidesToShow: 1,
+              slidesToScroll: 1
+            }
+          }
+        ]
+    });
+  
+</script>

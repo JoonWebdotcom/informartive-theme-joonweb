@@ -1,0 +1,308 @@
+{% set logo_size_classes = {
+	"xs": "see-xsm-logo",
+	"s": "see-sm-logo",
+	"m": "see-medium-logo",
+	"l": "see-large-logo",
+	"xl": "see-extra-large-logo"
+  } %}
+  
+{% set logo_class = logo_size_classes[Property.logo.size] ?? '' %}
+
+
+{% if social or email or phone %}
+	<div class="top_header py-1 space_1 background5 {{ section.colors ? section.colors }}" id="{{section.id}}">
+		<div class="container_fluid">
+		<div class="row p-0">
+			<div class="col-md-12">
+			<div class="top_header_style">
+				{% if social %}
+					<div class="top_header_clock">
+						<div class="to_header_icons">
+							{% for item in social %}
+								<div class="top_header_icon fontStyle8"><a href="{{ item.href }}">{{ item.icon }}</a></div>
+							{% endfor %}
+						</div>
+					</div>
+				{% endif %}
+
+				<div class="top_header_media">
+					{% if email %}
+            			{% for i, item in site.email %}
+                  			{% if Property.email.value[i] != 'no' %}
+                              <div class="top_header_first fontStyle8 "><a href="mailto:{{ item.data }}">
+                                  <i class="fa-solid fa-envelope top_header_icon_i"></i>{{ item.data }}</a>
+                              </div>
+                 			{% endif %}
+						{% endfor %}
+					{% endif %}
+
+					{% if phone %}
+            			{% for i, item in site.phone %}
+                  			{% if Property.phone.value[i] != 'no' %}
+                              <div class="top_header_first fontStyle8 ms-3 "><a href="tel:{{ item.data }}">
+                                  <i class="fa-solid fa-phone top_header_icon_i"></i> {{ item.data }}</a>
+                              </div>
+                  			{% endif %}
+						{% endfor %}
+					{% endif %}
+				</div>
+			</div>
+			</div>
+		</div>
+		</div>
+	</div>
+{% endif %}
+
+  <div class="cm-header-wrap p-lg-2 p-md-4 p-sm-4 p-3 background1 {{ section.colors2 ? section.colors2 }}">
+		<header class="cm-menu-wrap space_1">
+
+		{% if logo or title %}
+			<div class="logo">
+				{% if logo %}<a href="{{ root.url }}" class="{{logo_class ? logo_class : 'default-size'}}">
+              <img src="{{ logo }}" alt="{{ logo.alt }}"></a>{% endif %}
+				
+				{% if title %}
+					<div class="main_title">
+						<div class="title"><a href="{{ root.url }}" 
+							class="{{logo_class ? logo_class : 'default-size'}}">{{ title }}</a></div>
+					</div>
+				{% endif %}
+			</div>
+		{% endif %}
+
+		{% if section.navigation or social or email %}
+			<nav class="cm-menu-inner">
+
+				{% if section.navigation %}
+					<ul class="menu-ul clear-all">
+						{% for navkey, menu in section.navigation %}
+							<li class="nav_style {% if menu.children %}has-child{% endif %} fontStyle8">
+								<a href="{{ menu.link }}">{{ menu.label }} {% if menu.children %}<i class="fa-solid fa-angle-down ms-1 arrow_main"></i>{%                                  endif %}</a>
+
+								{% if menu.children %}
+									<ul class="menu-ul">
+										{% for subkey,submenu in menu.children %}
+											<li class="{% if submenu.children %}has-child{% endif %} fontStyle8">
+												<a href="{{submenu.link}}">{{submenu.label}} {% if submenu.children %}<i class="fa-solid fa-angle-left  arrow_main arrow_main_2"></i>{%                                  endif %}</a>
+												{% if submenu.children %}
+													<ul class="menu-ul">
+														{% for subkey2,submenu2 in submenu.children %}
+															<li class="fontStyle8">
+																<a href="{{submenu2.link}}">{{submenu2.label}}</a>
+															</li>
+														{% endfor %}
+													</ul>
+												{% endif %}
+											</li>
+										{% endfor %}
+									</ul>
+								{% endif %}
+							</li>
+						{% endfor %}
+
+					</ul>
+				{% endif %}
+
+				{% if social or email or phone %}
+					<div class="hide_section">
+						{% if email %}
+							{% for item in site.email %}
+								<div class="top_header_first fontStyle8"><a href="mailto:{{ item.data }}"><i class="fa-solid fa-envelope me-2"></i>{{ item.data }}</a></div>
+							{% endfor %}
+						{% endif %}
+
+						{% if phone %}
+            				{% for item in site.phone %}
+								<div class="top_header_first fontStyle8"><a href="tel:{{ item.data }}"><i class="fa-solid fa-phone me-2"></i>{{ item.data }}</a></div>
+							{% endfor %}
+						{% endif %}
+						
+						{% if social %}
+							<div class="to_header_icons">
+								{% for item in social %}
+									<div class="top_header_icon fontStyle8"><a href="{{ item.href }}">{{ item.icon }}</a></div>
+								{% endfor %}
+							</div>
+						{% endif %}
+
+					</div>
+				{% endif %}
+			</nav>
+          {% endif %}
+
+			{% if button %}
+      			<div>
+					{% for btn in button %}
+						<a href="{{ btn.href }}" target="{{ btn.target }}" class="primary_btn main_btn_1 fontStyle8">{{ btn.label }}</a>
+					{% endfor %}
+				</div>
+			{% endif %}
+
+        <div class="cm-menu-btn fa fa-bars open"></div>
+		</header>
+	</div>
+
+  <style>
+    
+.see-xsm-logo img{height: 40px !important;object-fit: contain;}
+.see-sm-logo img{height: 50px !important;object-fit: contain;}
+.default-size img{height: 55px !important;object-fit: contain;}
+.see-medium-logo img{height: 70px !important;object-fit: contain;}
+.see-large-logo img{height: 85px !important;object-fit: contain;}
+.see-extra-large-logo img{height: 100px !important;object-fit: contain;}
+
+.see-xsm-logo{font-size: 0.8rem !important;}
+.see-sm-logo{font-size: 1.2rem !important;}
+.default-size{font-size: 1.6rem !important;}
+.see-medium-logo{font-size: 2rem !important;}
+.see-large-logo{font-size: 2.4rem !important;}
+.see-extra-large-logo{font-size: 3rem !important;}
+
+  .open{color: var(--color5); font-size: 1.3rem;}
+  .logo img{width:auto;}
+  .logo{max-width: 320px;}
+  .main_title{margin-left:0.5rem;}
+  .logo{display: flex; justify-content: flex-start; align-items: center; flex-wrap:wrap;}
+  .to_header_icons{display: flex; }
+  .top_header_clock{display: flex;}
+  .to_header_icons .top_header_icon a{margin: 0 0.5rem; color: unset;}
+  .top_header_style{display: flex; justify-content: space-between; padding: 0.5rem 0rem;}
+  .top_header_media{display: flex;}
+  .hide_section{display: none;}
+
+.cm-header-wrap {
+    top: 0;
+    left: 0;
+    background:var(--color1);
+    width: 100%;
+    padding: 20px 15px;
+    z-index:1000;
+    position: relative;
+}
+    .top_header_icon_i{margin-right:0.5rem !important;}
+.cm-menu-wrap{display: flex; justify-content: space-between; align-items: center; width:100%;}
+
+.cm-menu-inner ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.cm-menu-inner > ul {
+    display: block;
+}
+
+.cm-menu-inner > ul > li {
+    float: left;
+    padding: 0 0px;
+}
+
+.cm-menu-inner > ul  li a {
+    display: block;
+    color: var(--color5);
+    padding:1rem;
+    text-decoration: none;
+}
+
+@media(min-width: 992px) {
+
+    .arrow_main_2{display:inline-block; float:right;}
+
+	.cm-menu-inner ul ul {
+	    position: absolute;
+	    top: 100%;
+	    right: 0;
+      background-color: var(--color1);
+	    min-width: 180px;
+	    opacity: 0;
+	    visibility: hidden;
+	    transition: all 300ms linear;
+	}
+
+	.cm-menu-inner ul li.has-child {
+	    position: relative;
+	}
+
+	.cm-menu-inner ul li.has-child:hover > ul {
+	    opacity: 1;
+	    visibility: visible;
+	}
+
+    .cm-menu-inner ul ul ul {
+     right: 100%;
+     top: 0;
+    }
+
+	.cm-menu-inner {
+	    display: flex;
+	    justify-content: center;
+	}
+
+	.cm-menu-inner {
+	    display: flex !important;
+	}
+
+	.cm-menu-inner ul {
+		display: block!important;
+	}
+
+	.cm-menu-btn, .child-menu-btn {
+	    display: none;
+	}
+
+}
+
+@media(max-width: 991px) {
+  .arrow_main{display:none;}
+	.cm-menu-inner {
+	    position: absolute;
+	    background-color:var(--color1);
+	    width: 100%;
+	    left: 0;
+	    top: 100%;
+	    display: none;
+	}
+
+  .hide_section{display: block; padding: 1rem;}
+  .hide_section .top_header_first{margin-bottom:1rem;}
+
+	.cm-menu-inner > ul > li {
+	    float: none;
+	    padding: 0;
+	}
+
+	.cm-menu-inner ul ul > li > a {
+	    padding-left: 25px;
+	}
+
+	.cm-menu-inner ul ul ul > li > a {
+	    padding-left: 35px;
+	}
+
+
+	li.has-child {
+	    position: relative;
+	}
+
+	.child-menu-btn {
+	    color: var(--color5);
+	    position: absolute;
+	    right: 0;
+	    line-height: 40px;
+	    width: 40px;
+	    text-align: center;
+	    cursor: pointer;
+	    top: 0;
+	}
+
+	.cm-menu-inner ul ul {
+		display: none;
+	}
+}
+
+@media (max-width:576px) {
+  .top_header{display: none;}
+  .main_btn_1{display:none;}
+}
+  
+  </style>

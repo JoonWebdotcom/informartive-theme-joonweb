@@ -1,0 +1,11 @@
+<section class="basic section-padding {{ section.colors ? section.colors }}" id="{{section.id}}">
+    <div class="container">
+      {% if media %}
+        <div class="basic-content text-center">
+            <div class="basic-media media-radius">
+                <img src="{{ media }}" class="theme-shadow-lg" alt="{{ media.alt }}">
+            </div>
+        </div>
+      {% endif %}
+    </div>
+</section>

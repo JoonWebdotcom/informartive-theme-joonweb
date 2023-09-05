@@ -1,0 +1,21 @@
+<section class="section-padding form_1 {{ section.colors ? section.colors }}" id="{{section.id}}" 
+         style="{% if media %}background:url({{ media }});{% endif %}background-size:cover;height:700px;position:relative;">
+
+     <div class="form_1_img">
+       {% if title or description or form %}
+       <div class="form_1_div background5 {{ section.colors2 ? section.colors2 }}">
+        <div class="mb-4 text-center">
+          {% if title %}<div class="fontStyle2 mg-1">{{ title }}</div>{% endif %}
+          {% if description %}<div class="fontStyle5">{{ description }}</div>{% endif %}
+        </div>
+         
+         {% if form %}
+             <div class="form_form_style">
+               {{ form }}
+             </div>
+         {% endif %}
+       </div>
+       {% endif %}
+     </div>   
+
+   </section>

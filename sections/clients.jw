@@ -1,0 +1,22 @@
+<section class="client space {{ section.colors ? section.colors }}" id="{{section.id}}">
+    <div class="container-fluid">
+        {% if listitem %}
+            <div class="row {% if listitem | length < 4 %}justify-content-center{% endif %}">
+
+                {% for key, item in listitem %}
+                    <div class="col-md-3">
+                        <div class="client_style">
+                            <img src="{{ item.item_media }}" alt="{{ item.item_media.alt }}">
+                        </div>
+                    </div>
+                {% endfor %}
+            
+            </div>
+        {% endif %}
+    </div> 
+</section>
+   
+<style>
+.client_style{text-align: center;} 
+.client_style img{width:80%; aspect-ratio: 3/2; object-fit: contain;}
+</style>

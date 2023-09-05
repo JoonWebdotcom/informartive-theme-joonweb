@@ -1,0 +1,62 @@
+<section class="counter space background5 {{ section.colors ? section.colors }}" id="{{section.id}}" 
+style="{% if background %}background-image: url('{{ background }}');{% endif %} background-repeat: no-repeat; background-size: cover; width:100%; min-height:300px; display: flex;  align-items: center; background-attachment: fixed;">
+    <div class="container-fluid">
+
+        {% if listitem %}
+            <div class="row d-flex gy-5 counter_1 {% if listitem | length < 3 %}justify-content-center{% endif %}">
+
+                {% for key, item in listitem %}
+                    <div class="col-lg-3 col-md-4 col-sm-6 col-6 flex-grow-1">
+                        <div class="counter_style">
+                            <div class="counter_number">
+                                {% if item.number %}<div class="counter_num count fontStyle1 mb-2" 
+                                data-count="{{ item.number }}">{{ item.number }} +</div>{% endif %}
+                                {% if item.item_description %}<div class="fontStyle4">{{ item.item_description }}</div>{% endif %}
+                            </div>
+                        </div> 
+                    </div>
+                {% endfor %}
+
+            </div>
+        {% endif %}
+    </div>  
+</section>  
+
+<style>
+    .counter_style{text-align: center;}
+    .add-count::after{content:"\2b"; font-family: FontAwesome;color:var(--white);font-size:2.2rem;margin-left:0.7rem;}
+</style>
+
+<script>
+    var counted = 0;
+    $(window).scroll(function() {
+
+  var oTop = $('.counter_1').offset().top - window.innerHeight;
+  if (counted == 0 && $(window).scrollTop() > oTop) {
+    $('.count').each(function() {
+      var $this = $(this),
+        countTo = $this.attr('data-count');
+      $({
+        countNum: $this.text()
+      }).animate({
+          countNum: countTo
+        },
+
+        {
+          duration: 2000,
+          easing: 'swing',
+          step: function() {
+            $this.text(Math.floor(this.countNum));
+          },
+          complete: function() {
+            $this.text(this.countNum);
+            $this.addClass("add-count");
+          }
+
+        });
+    });
+    counted = 1;
+  }
+
+});
+    </script>
