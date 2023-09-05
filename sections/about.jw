@@ -1,1 +1,38 @@
+<section class="about space {{ section.colors ? section.colors }}" id="{{section.id}}">
+    <div class="container-fluid">
+      <div class="row gy-4 d-flex align-items-center">
+        {% if media %}
+            <div class="col-lg-6 col-md-12 col-sm-12">
+                <div class="about_img">
+                    <img src="{{ media }}" alt="{{ media.alt }}" class="thumbnail">
+                </div>
+            </div>
+       {% endif %}
 
+
+        {% if title or description or button %}
+            <div class="col-lg-6 col-md-12 col-sm-12">
+                <div class="about_text"> 
+                    {% if title %}<div class="fontStyle1 about_text">{{ title }}</div>{% endif %}
+                    {% if description %}<div class="fontStyle8 mg content_data">{{ description }}</div>{% endif %}
+                </div>
+
+                {% if button %}
+                    <div class="mt-5">
+                        {% for key, btn in button %}
+                            <a href="{{ btn.href }}" target="{{ btn.target }}" class="btn fontStyle8"><span>{{ btn.label }}</span></a>
+                        {% endfor %}
+                    </div>
+                {% endif %}
+            </div>
+        {% endif %}
+        
+      </div>
+    </div> 
+   </section>
+   
+   <style>
+      .about_img img{width:100%; aspect-ratio: 1/1; object-fit:cover;}
+      .about_text{word-wrap:break-word;}
+
+   </style>
