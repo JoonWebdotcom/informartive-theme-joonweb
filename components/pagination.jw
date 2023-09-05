@@ -1,0 +1,39 @@
+{% macro pagination(total, current, pageQueryParam = 'page', nearbyPagesLimit = 4) %}
+  {% if total and current %}
+      {% if total > 1 %}
+          <ul class="pagination my-4">
+              {% for i in 1..total %}
+                  {% if 0 == (current - nearbyPagesLimit) - loop.index %}
+                      <li class="page-item"><a href="{{ (current_url ~ '?' ~ (query | merge({(pageQueryParam): 1})| url_encode)) }}" class="page-link">1</a></li>
+                      {% if 1 != loop.index %}
+                          <li class="page-item">
+                              <a href="javascript:void(0)" class="page-link">...</a>
+                          </li>
+                      {% endif %}
+                  {% elseif 0 == (current + nearbyPagesLimit) - loop.index  and (current + nearbyPagesLimit) < total %}
+                      <li class="page-item">
+                          <a href="javascript:void(0)" class="page-link">...</a>
+                      </li>
+                  {% elseif 0 < (current - nearbyPagesLimit) - loop.index %}
+                  {% elseif 0 > (current + nearbyPagesLimit) - loop.index %}
+                  {% else %}
+                      <li class="page-item{{ current == loop.index ? ' active' }}">
+                          <a href="{{ (current_url ~ '?' ~ (query | merge({(pageQueryParam): loop.index})| url_encode)) }}" class="page-link">{{ loop.index }}</a>
+                      </li>
+                  {% endif %}
+              {% endfor %}
+              {% if current != total  and (current + nearbyPagesLimit) < total %}
+                  <li class="page-item"><a href="{{ (current_url ~ '?' ~ (query|merge({(pageQueryParam): total})|url_encode))}}" class="page-link">{{ total | round }}</a></li>
+              {% endif %}
+          </ul>
+      {% endif %}
+  {% endif %}
+
+<style>
+  .pagination{justify-content:center;}
+  .page-item .page-link{padding:1.2rem 1.8rem;background:var(--color2);border-radius:0 !important;margin:0 0.2rem;
+  font-size:1.2rem;border-color:unset;color:var(--color5);}
+  .page-item.active .page-link{background:var(--color1);}
+</style>
+
+{% endmacro  %}
