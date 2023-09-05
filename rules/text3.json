@@ -1,0 +1,31 @@
+{
+    "settings": [],
+    "rules": {
+        "title": {
+            "label": "Title",
+            "type": "quickEditor",
+            "show": "yes",
+            "default": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque at molestias beatae autem rerum architecto."
+        },
+        "description": {
+            "label": "Content Description",
+            "type": "simpleEditor",
+            "show": "no",
+            "default": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque at molestias beatae autem rerum architecto. Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque at molestias beatae autem rerum architecto."
+        },
+        "media": {
+            "label": "Media",
+            "type": "singlefile",
+            "show": "no",
+            "default": "img3.jpg"
+        },
+        "button": {
+            "label": "Action Button",
+            "type": "hrefbutton",
+            "show": "no",
+            "default": [
+                "Button"
+            ]
+        }
+    }
+}

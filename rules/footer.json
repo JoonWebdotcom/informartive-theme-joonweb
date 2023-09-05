@@ -1,0 +1,68 @@
+{
+    "settings": [],
+    "rules": {
+        "title": {
+            "label": "Site Title",
+            "type": "quickEditor",
+            "show": "yes",
+            "default": "Urbanistic",
+            "system_val": "{{site.title}}"
+        },
+        "logo": {
+            "label": "Logo",
+            "type": "singlefile",
+            "show": "yes",
+            "default": "logo.png"
+        },
+        "subtitle": {
+            "label": "Site Tagline",
+            "type": "quickEditor",
+            "show": "yes",
+            "default": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Error ad enim a perferendis doloremque, mollitia dolore aspernatur voluptas itaque"
+        },
+        "button": {
+            "label": "Action Button",
+            "type": "hrefbutton",
+            "show": "yes",
+            "default": ["Get in Touch"]
+        },
+        "phone": {
+            "label": "Contact Number",
+            "type": "number",
+            "show": "yes",
+            "default": "+11-789-2323",
+            "system_val": "{{site.phone}}"
+        },
+        "email": {
+            "label": "Contact Mail",
+            "type": "email",
+            "show": "yes",
+            "default": "contact@domain-name.com",
+            "system_val": "{{site.email}}"
+        },
+        "address": {
+            "label": "Address",
+            "type": "text",
+            "show": "yes",
+            "default": "212th Street Model Town, NY, 123098",
+            "system_val": "{{site.address}}"
+        },
+        "copyright": {
+            "label": "Copyright Text",
+            "type": "text",
+            "show": "yes",
+            "default": "Copyright \u00a9 {{ site.title }} {{ date.year }}. All rights reserved."
+        },
+        "powered": {
+            "label": "Powered By",
+            "type": "text",
+            "show": "yes",
+            "default": "Powered by Joonweb.com"
+        },
+        "social": {
+            "label": "Social",
+            "type": "socialicon",
+            "show": "no"
+        }
+    }
+}

@@ -1,0 +1,24 @@
+{
+    "type":"BlogFeed", 
+    "settings":[],
+    "rules":{
+      "title": {
+        "label": "Title",
+        "type": "quickEditor",
+        "show": "yes",
+        "default": "Latest Blogs"
+      },
+      "description": {
+        "label": "Content Description",
+        "type": "simpleEditor",
+        "show": "no",
+        "default": "Far far away, behind the word mountains, far from the countries Vokalia and Consonantia."
+      },
+      "button":{
+        "label": "Action Button",
+        "type": "hrefbutton",
+        "show": "no",
+        "default": ["Explore more"]
+      }
+    }
+}

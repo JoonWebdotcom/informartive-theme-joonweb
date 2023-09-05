@@ -1,0 +1,23 @@
+{
+    "settings": [],
+    "rules": {
+        "title": {
+            "label": "Title",
+            "type": "quickEditor",
+            "show": "yes",
+            "default": "Behind each incredible organization, is a genuine story"
+        },
+        "description": {
+            "label": "Content Description",
+            "type": "simpleEditor",
+            "show": "no",
+            "default": "Behind each incredible organization, is a genuine story. Who are we? For what reason did we fabricate."
+        },
+        "media": {
+            "label": "Media",
+            "type": "singlefile",
+            "show": "yes",
+            "default": "img4.jpg"
+        }
+    }
+}

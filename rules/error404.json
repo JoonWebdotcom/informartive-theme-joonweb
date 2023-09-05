@@ -1,0 +1,31 @@
+{
+    "settings": [],
+    "rules": {
+        "title": {
+            "label": "Title",
+            "type": "quickEditor",
+            "show": "yes",
+            "default": "Look like you're lost"
+        },
+        "description": {
+            "label": "Content Description",
+            "type": "simpleEditor",
+            "show": "yes",
+            "default": "the page you are looking for not avaible!"
+        },
+        "media": {
+            "label": "Media",
+            "type": "singlefile",
+            "show": "yes",
+            "default": "404.gif"
+        },
+        "button": {
+            "label": "Action Button",
+            "type": "hrefbutton",
+            "show": "yes",
+            "default": [
+                "Go to Home"
+            ]
+        }
+    }
+}

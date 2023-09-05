@@ -1,0 +1,46 @@
+{
+    "settings": [],
+    "navigation": [],
+    "rules": {
+        "logo": {
+            "label": "Logo",
+            "type": "singlefile",
+            "show": "yes",
+            "system_val": "{{site.logo}}"
+        },
+        "title": {
+            "label": "Site Title",
+            "type": "quickEditor",
+            "show": "yes",
+            "default": "Urbanistic",
+            "system_val": "{{site.title}}"
+        },
+        "phone": {
+            "label": "Contact Number",
+            "type": "number",
+            "show": "yes",
+            "default": "+11-789-2323",
+            "system_val": "{{site.phone}}"
+        },
+        "email": {
+            "label": "Contact Mail",
+            "type": "email",
+            "show": "yes",
+            "default": "contact@domain-name.com",
+            "system_val": "{{site.email}}"
+        },
+        "button": {
+            "label": "Action Button",
+            "type": "hrefbutton",
+            "show": "yes",
+            "default": [
+                "Get Started"
+            ]
+        },
+        "social": {
+            "label": "Social",
+            "type": "socialicon",
+            "show": "yes"
+        }
+    }
+}

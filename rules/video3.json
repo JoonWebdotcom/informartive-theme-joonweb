@@ -1,0 +1,37 @@
+{
+    "settings": [],
+    "rules": {
+        "title": {
+            "label": "Title",
+            "type": "quickEditor",
+            "show": "no",
+            "default": "Want to know more?"
+        },
+        "description": {
+            "label": "Content Description",
+            "type": "simpleEditor",
+            "show": "no",
+            "default": "Behind each incredible organization, is a genuine story. Who are we? For what reason did we fabricate our business? Also, what makes us the best at what we do, today? Our process has been everything except standard."
+        },
+        "media": {
+            "label": "Embed Video",
+            "type": "singlefile",
+            "show": "yes",
+            "varient": [
+                "image",
+                "embed"
+            ],
+            "default_varient": "embed",
+            "default": "https:\/\/youtu.be\/K_Q6Hn_-A8w"
+        },
+        "button": {
+            "label": "Action Button",
+            "type": "hrefbutton",
+            "show": "no",
+            "default": [
+                "Button",
+                "Button"
+            ]
+        }
+    }
+}

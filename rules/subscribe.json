@@ -1,0 +1,30 @@
+{
+    "settings":[],
+    "rules":{
+        "title": {
+            "label": "Title",
+            "type": "quickEditor",
+            "show": "yes",
+            "default": "Subscribe to our newsletter"
+        },
+        "description": {
+            "label": "Content Description",
+            "type": "simpleEditor",
+            "show": "yes",
+            "default": "Lorem ipsum dolor sit amet consectetur adipisicing elit."
+        },
+        "background": {
+            "label": "Background Media",
+            "type": "singlefile",
+            "show": "yes",
+            "default": "im16.jpg"
+        },
+        "form": {
+            "label": "Subscribe Form",
+            "type": "siteform",
+            "show": "yes",
+            "default": "subscribe"
+        }
+        
+    }
+}

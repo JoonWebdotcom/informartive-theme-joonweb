@@ -1,0 +1,46 @@
+{
+    "settings": [],
+    "rules": {
+      "title": {
+        "show": "yes",
+        "type": "quickEditor",
+        "label": "Title",
+        "default": "FAQ"
+      },
+      "description": {
+        "label": "Description",
+        "type": "simpleEditor",
+        "show": "yes",
+        "default": "Lorem ipsum dolor sit amet consectetur"
+      },
+      "listitem": {
+        "fields": {
+          "question": {
+            "show": "yes",
+            "type": "quickEditor",
+            "label": "Item Question"
+          },
+          "answer": {
+            "show": "yes",
+            "type": "simpleEditor",
+            "label": "Item Answer"
+          }
+        },
+        "default": [
+          {
+            "question": "Q1. What is {{ site.title }}?",
+            "answer": "FAQs accordion is a great way to help you build authority and trust, and at the same time bestow a bit of personality on the website. It also helps you answer frequently asked questions, produce additional quickly, and reduce bounce rates."
+          },
+          {
+            "question": "Q2. What we do?",
+            "answer": "FAQs accordion is a great way to help you build authority and trust, and at the same time bestow a bit of personality on the website. It also helps you answer frequently asked questions, produce additional quickly, and reduce bounce rates."
+          },
+          {
+            "question": "Q3. Who we are?",
+            "answer": "FAQs accordion is a great way to help you build authority and trust, and at the same time bestow a bit of personality on the website. It also helps you answer frequently asked questions, produce additional quickly, and reduce bounce rates."
+          }
+        ]
+      }
+    }
+    
+  }

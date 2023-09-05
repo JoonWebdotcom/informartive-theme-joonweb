@@ -1,0 +1,31 @@
+{
+    "settings": [],
+    "rules": {
+        "title": {
+            "label": "Title",
+            "type": "quickEditor",
+            "show": "yes",
+            "default": "CONTACT US NOW !"
+        },
+        "description": {
+            "label": "Content Description",
+            "type": "simpleEditor",
+            "show": "yes",
+            "default": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem, a mollitia tempore nam quibusdam repudiandae distinctio"
+        },
+        "media": {
+            "label": "Media",
+            "type": "singlefile",
+            "show": "yes",
+            "default": "im6.jpg"
+        },
+        "button": {
+            "label": "Action Button",
+            "type": "hrefbutton",
+            "show": "yes",
+            "default": [
+                "Contact Us"
+            ]
+        }
+    }
+}

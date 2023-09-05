@@ -1,0 +1,63 @@
+{
+    "settings": [],
+    "rules": {
+        "title": {
+            "label": "Title",
+            "type": "quickEditor",
+            "show": "yes",
+            "default": "What Our Client Say"
+        },
+        "description": {
+            "label": "Content Description",
+            "type": "simpleEditor",
+            "show": "yes",
+            "default": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque at molestias beatae autem rerum architecto"
+        },
+        "listitem": {
+            "fields": {
+                "item_name": {
+                    "label": "Item Title",
+                    "type": "quickEditor",
+                    "show": "yes"
+                },
+                "item_subtitle": {
+                    "label": "Item Subtitle",
+                    "type": "quickEditor",
+                    "show": "yes"
+                },
+                "item_media": {
+                    "label": "Item Media",
+                    "type": "singlefile",
+                    "show": "yes"
+                },
+                "item_social": {
+                    "label": "Social",
+                    "type": "socialicon",
+                    "show": "yes"
+                }
+            },
+            "default": [
+                {
+                    "item_name": "Jenny Lewis",
+                    "item_subtitle": "Manager",
+                    "item_media": "team-member-2.jpg"
+                },
+                {
+                    "item_name": "Martha",
+                    "item_subtitle": "Manager",
+                    "item_media": "team-member-3.jpg"
+                },
+                {
+                    "item_name": "Emma",
+                    "item_subtitle": "Manager",
+                    "item_media": "team-member-2.jpg"
+                },
+                {
+                    "item_name": "Martha",
+                    "item_subtitle": "Manager",
+                    "item_media": "team-member-3.jpg"
+                }
+            ]
+        }
+    }
+}

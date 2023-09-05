@@ -1,0 +1,42 @@
+{
+
+    "settings":[],
+    "rules":{
+        "background": {
+            "label": "Background Media",
+            "type": "singlefile",
+            "show": "yes",
+            "default" : "im17.jpg"
+        },
+
+        "listitem":{
+          "fields": {
+              "number":{
+                  "label": "Item Value",
+                  "type": "number",
+                  "show": "yes"
+              },
+              "item_description":{
+                  "label": "Item Description",
+                  "type": "quickEditor",
+                  "show": "yes"
+              }
+          },
+          "default": [
+            {
+                "number": "20000",
+                "item_description": "Happy Guests"
+            },
+            {
+                "number": "1000",
+                "item_description": "Projects Completed"
+            },
+            {
+                "number": "900",
+                "item_description": "Destination"
+            }
+          ]       
+        }
+      }
+  
+}

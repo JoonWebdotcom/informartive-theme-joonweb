@@ -1,0 +1,11 @@
+{
+    "settings": [],
+    "rules": {
+        "media": {
+            "label": "Media",
+            "type": "singlefile",
+            "show": "yes",
+            "default": "img7.jpg"
+        }
+    }
+}

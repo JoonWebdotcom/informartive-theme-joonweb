@@ -1,0 +1,31 @@
+{
+    "settings": [],
+    "rules": {
+        "title": {
+            "label": "Title",
+            "type": "quickEditor",
+            "show": "yes",
+            "default": "Enter heading here"
+        },
+        "description": {
+            "label": "Content Description",
+            "type": "simpleEditor",
+            "show": "yes",
+            "default": "<h2>Introduction<\/h2><p>This Privacy Policy will inform you about the types of personal data we collect, the purposes for which we use the data, the ways in which the data is handled and your rights with regard to your personal data. Furthermore, this Privacy Policy is intended to satisfy the obligation of transparency under the EU General Data Protection Regulation 2016\/679<\/p><p>We may change this Privacy Policy from time to time. If we decide to change this Privacy Policy, we will inform you by posting the revised Privacy Policy on the Site. date shown at the end of this Privacy Policy. By continuing to use the Site or Services, you consent to the revised Privacy Policy. We encourage you to periodically review the Privacy Policy for the latest information on our privacy practices.<\/p><ol><li><h2>Information Collected Through Your Use of Our Services<\/h2><p>The following are situations in which you may provide Your Information to us:<\/p><ol><li><p>When you fill out forms or fields through our Services;<\/p><\/li><li><p>When you register for an account with our Service;<\/p><\/li><\/ol><\/li><\/ol>"
+        },
+        "media": {
+            "label": "Media",
+            "type": "singlefile",
+            "show": "no",
+            "default": "img1.jpg"
+        },
+        "button": {
+            "label": "Action Button",
+            "type": "hrefbutton",
+            "show": "no",
+            "default": [
+                "Button"
+            ]
+        }
+    }
+}

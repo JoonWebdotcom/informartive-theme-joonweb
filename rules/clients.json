@@ -1,0 +1,28 @@
+{
+    "settings": [],
+    "rules": {
+        "listitem": {
+            "fields": {
+                "item_media": {
+                    "label": "Item Media",
+                    "type": "singlefile",
+                    "show": "yes"
+                }
+            },
+            "default": [
+                {
+                    "item_media": "client1.svg"
+                },
+                {
+                    "item_media": "client2.svg"
+                },
+                {
+                    "item_media": "client4.svg"
+                },
+                {
+                    "item_media": "client1.svg"
+                }
+            ]
+        }
+    }
+}

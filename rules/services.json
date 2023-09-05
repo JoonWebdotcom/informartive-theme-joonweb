@@ -1,0 +1,53 @@
+{
+    "settings": [],
+    "rules": {
+        "title": {
+            "label": "Title",
+            "type": "quickEditor",
+            "show": "yes",
+            "default": "Our Services"
+        },
+        "description": {
+            "label": "Content Description",
+            "type": "simpleEditor",
+            "show": "yes",
+            "default": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque at molestias beatae autem rerum architecto"
+        },
+        "listitem": {
+            "fields": {
+                "item_name": {
+                    "label": "Item Title",
+                    "type": "quickEditor",
+                    "show": "yes"
+                },
+                "item_media": {
+                    "label": "Item Media",
+                    "type": "singlefile",
+                    "show": "yes"
+                },
+                "item_description": {
+                    "label": "Item Description",
+                    "type": "quickEditor",
+                    "show": "yes"
+                }
+            },
+            "default": [
+                {
+                    "item_name": "URBAN DESIGN",
+                    "item_media": "im12.jpg",
+                    "item_description": "Lorem ipsum dolor sit amet consectetur adipisicing."
+                },
+                {
+                    "item_name": "INTERRIOR DESIGN",
+                    "item_media": "im14.jpg",
+                    "item_description": "Lorem ipsum dolor sit amet consectetur adipisicing."
+                },
+                {
+                    "item_name": "LANDSCAPE DESIGN",
+                    "item_media": "im16.jpg",
+                    "item_description": "Lorem ipsum dolor sit amet consectetur adipisicing."
+                }
+            ]
+        }
+    }
+}

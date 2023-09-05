@@ -1,0 +1,17 @@
+{
+    "settings": [],
+    "rules": {
+        "media": {
+            "label": "Media",
+            "type": "singlefile",
+            "show": "yes",
+            "default": "img3.jpg"
+        },
+        "media2": {
+            "label": "Second Media",
+            "type": "singlefile",
+            "show": "yes",
+            "default": "img4.jpg"
+        }
+    }
+}

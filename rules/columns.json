@@ -1,0 +1,84 @@
+{
+    "settings": [],
+    "rules": {
+        "title": {
+            "label": "Title",
+            "type": "quickEditor",
+            "show": "yes",
+            "default": "Enter heading here"
+        },
+        "description": {
+            "label": "Content Description",
+            "type": "simpleEditor",
+            "show": "no",
+            "default": "Behind each incredible organization, is a genuine story. Who are we? For what reason did we fabricate our business? Also, what makes us the best at what we do, today? Our process has been everything except standard."
+        },
+        "media": {
+            "label": "Media",
+            "type": "singlefile",
+            "show": "no",
+            "default": "img8.jpg"
+        },
+        "button": {
+            "label": "Action Button",
+            "type": "hrefbutton",
+            "show": "no",
+            "default": [
+                "Button"
+            ]
+        },
+        "listitem": {
+            "fields": {
+                "item_name": {
+                    "label": "Item Title",
+                    "type": "quickEditor",
+                    "show": "yes"
+                },
+                "item_media": {
+                    "label": "Item Media",
+                    "type": "singlefile",
+                    "show": "yes"
+                },
+                "item_description": {
+                    "label": "Item Subtitle",
+                    "type": "quickEditor",
+                    "show": "yes"
+                },
+                "item_button": {
+                    "label": "Item Button",
+                    "type": "hrefbutton",
+                    "show": "yes"
+                }
+            },
+            "default": [
+                {
+                    "item_name": "Our Values",
+                    "item_media": "img3.jpg",
+                    "item_description": "Like all great things, we started small. We took a few like-minds with a shared vision",
+                    "item_button": [
+                        "Button",
+                        "Button"
+                    ]
+                },
+                {
+                    "item_name": "Our Values",
+                    "item_media": "img4.jpg",
+                    "item_description": "Like all great things, we started small. We took a few like-minds with a shared vision",
+                    "item_button": [
+                        "Button",
+                        "Button"
+                    ]
+                },
+                {
+                    "item_name": "Our Values",
+                    "item_media": "img5.jpg",
+                    "item_description": "Like all great things, we started small. We took a few like-minds with a shared vision",
+                    "item_button": [
+                        "Button",
+                        "Button"
+                    ]
+                }
+            ]
+        }
+    }
+}

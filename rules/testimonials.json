@@ -1,0 +1,226 @@
+{
+    "settings": [
+        {
+            "id": "slider",
+            "label": "Desktop Slider",
+            "type": "custom",
+            "elements": [
+                {
+                    "label": "Autoplay",
+                    "id": "autoplay",
+                    "type": "select",
+                    "options": [
+                        {
+                            "label": "Yes",
+                            "value": "yes"
+                        },
+                        {
+                            "label": "No",
+                            "value": "no"
+                        }
+                    ],
+                    "default": "yes"
+                },
+                {
+                    "label": "Arrows",
+                    "id": "arrows",
+                    "type": "select",
+                    "options": [
+                        {
+                            "label": "Yes",
+                            "value": "yes"
+                        },
+                        {
+                            "label": "No",
+                            "value": "no"
+                        }
+                    ],
+                    "default": "no"
+                },
+                {
+                    "label": "Dots",
+                    "id": "dots",
+                    "type": "select",
+                    "options": [
+                        {
+                            "label": "Yes",
+                            "value": "yes"
+                        },
+                        {
+                            "label": "No",
+                            "value": "no"
+                        }
+                    ],
+                    "default": "yes"
+                },
+                {
+                    "label": "Slide to Show",
+                    "id": "slidesToShow",
+                    "type": "select",
+                    "options": [
+                        {
+                            "label": "1",
+                            "value": "1"
+                        },
+                        {
+                            "label": "2",
+                            "value": "2"
+                        },
+                        {
+                            "label": "3",
+                            "value": "3"
+                        },
+                        {
+                            "label": "4",
+                            "value": "4"
+                        }
+                    ],
+                    "default": "2"
+                }
+            ]
+        },
+        {
+            "id": "mobileSlider",
+            "label": "Mobile Slider",
+            "type": "custom",
+            "elements": [
+                {
+                    "label": "Autoplay",
+                    "id": "autoplay",
+                    "type": "select",
+                    "options": [
+                        {
+                            "label": "Yes",
+                            "value": "yes"
+                        },
+                        {
+                            "label": "No",
+                            "value": "no"
+                        }
+                    ],
+                    "default": "yes"
+                },
+                {
+                    "label": "Arrows",
+                    "id": "arrows",
+                    "type": "select",
+                    "options": [
+                        {
+                            "label": "Yes",
+                            "value": "yes"
+                        },
+                        {
+                            "label": "No",
+                            "value": "no"
+                        }
+                    ],
+                    "default": "no"
+                },
+                {
+                    "label": "Dots",
+                    "id": "dots",
+                    "type": "select",
+                    "options": [
+                        {
+                            "label": "Yes",
+                            "value": "yes"
+                        },
+                        {
+                            "label": "No",
+                            "value": "no"
+                        }
+                    ],
+                    "default": "yes"
+                },
+                {
+                    "label": "Slide to Show",
+                    "id": "slidesToShow",
+                    "type": "select",
+                    "options": [
+                        {
+                            "label": "1",
+                            "value": "1"
+                        },
+                        {
+                            "label": "2",
+                            "value": "2"
+                        },
+                        {
+                            "label": "3",
+                            "value": "3"
+                        },
+                        {
+                            "label": "4",
+                            "value": "4"
+                        }
+                    ],
+                    "default": "1"
+                }
+            ]
+        }
+    ],
+    "rules": {
+        "title": {
+            "label": "Title",
+            "type": "quickEditor",
+            "show": "yes",
+            "default": "Our Testimonial"
+        },
+        "description": {
+            "label": "Content Description",
+            "type": "simpleEditor",
+            "show": "yes",
+            "default": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque at molestias beatae autem rerum architecto"
+        },
+        "listitem": {
+            "fields": {
+                "item_name": {
+                    "label": "Item Title",
+                    "type": "quickEditor",
+                    "show": "yes"
+                },
+                "item_subtitle": {
+                    "label": "Item Subtitle",
+                    "type": "quickEditor",
+                    "show": "yes"
+                },
+                "item_media": {
+                    "label": "Item Media",
+                    "type": "singlefile",
+                    "show": "yes"
+                },
+                "item_description": {
+                    "label": "Item Description",
+                    "type": "quickEditor",
+                    "show": "yes"
+                }
+            },
+            "default": [
+                {
+                    "item_name": "John Doe",
+                    "item_subtitle": "Manager",
+                    "item_media": "team-member-6.jpg",
+                    "item_description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quia iure corporis cupiditate?"
+                },
+                {
+                    "item_name": "Martha",
+                    "item_subtitle": "Manager",
+                    "item_media": "team-member-2.jpg",
+                    "item_description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quia iure corporis cupiditate?"
+                },
+                {
+                    "item_name": "Smith",
+                    "item_subtitle": "Manager",
+                    "item_media": "team-member-3.jpg",
+                    "item_description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quia iure corporis cupiditate?"
+                },
+                {
+                    "item_name": "Emma",
+                    "item_subtitle": "Manager",
+                    "item_media": "team-member-2.jpg",
+                    "item_description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quia iure corporis cupiditate?"
+                }
+            ]
+        }
+    }
+}

@@ -1,0 +1,68 @@
+{
+    "settings": [],
+    "rules": {
+        "title": {
+            "label": "Title",
+            "type": "quickEditor",
+            "show": "yes",
+            "default": "Our Features"
+        },
+        "description": {
+            "label": "Content Description",
+            "type": "simpleEditor",
+            "show": "yes",
+            "default": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque at molestias beatae autem rerum architecto"
+        },
+        "listitem": {
+            "fields": {
+                "item_name": {
+                    "label": "Item Title",
+                    "type": "quickEditor",
+                    "show": "yes"
+                },
+                "item_media": {
+                    "label": "Item Media",
+                    "type": "singlefile",
+                    "show": "yes"
+                },
+                "item_description": {
+                    "label": "Item Subtitle",
+                    "type": "quickEditor",
+                    "show": "yes"
+                }
+            },
+            "default": [
+                {
+                    "item_name": "Functional Spaces",
+                    "item_media": "services1.png",
+                    "item_description": "Lorem ipsum dolor sit amet consectetur adipisicing."
+                },
+                {
+                    "item_name": "Interior Design",
+                    "item_media": "services2.png",
+                    "item_description": "Lorem ipsum dolor sit amet consectetur adipisicing."
+                },
+                {
+                    "item_name": "Structural Design",
+                    "item_media": "services3.png",
+                    "item_description": "Lorem ipsum dolor sit amet consectetur adipisicing."
+                },
+                {
+                    "item_name": "Award-Winning Designs",
+                    "item_media": "services4.png",
+                    "item_description": "Lorem ipsum dolor sit amet consectetur adipisicing."
+                },
+                {
+                    "item_name": "Influential And Impactful",
+                    "item_media": "services5.png",
+                    "item_description": "Lorem ipsum dolor sit amet consectetur adipisicing."
+                },
+                {
+                    "item_name": "Concept Drawings",
+                    "item_media": "services2.png",
+                    "item_description": "Lorem ipsum dolor sit amet consectetur adipisicing."
+                }
+            ]
+        }
+    }
+}

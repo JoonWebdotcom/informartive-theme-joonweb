@@ -1,0 +1,22 @@
+{
+    "settings": [],
+    "rules": {
+        "title": {
+            "label": "Title",
+            "type": "quickEditor",
+            "show": "yes",
+            "default": "Have a Query"
+        },
+        "description": {
+            "label": "Content Description",
+            "type": "simpleEditor",
+            "show": "yes",
+            "default": "Lorem ipsum dolor sit amet consectetur"
+        },
+        "form": {
+            "label": "Contact Form",
+            "type": "siteform",
+            "show": "yes"
+        }
+    }
+}

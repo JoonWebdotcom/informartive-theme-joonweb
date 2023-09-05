@@ -1,0 +1,166 @@
+{
+    "settings": [
+        {
+            "id": "slider",
+            "label": "Desktop Slider",
+            "type": "custom",
+            "elements": [
+                {
+                    "label": "Autoplay",
+                    "id": "autoplay",
+                    "type": "select",
+                    "options": [
+                        {
+                            "label": "Yes",
+                            "value": "yes"
+                        },
+                        {
+                            "label": "No",
+                            "value": "no"
+                        }
+                    ],
+                    "default": "yes"
+                },
+                {
+                    "label": "Dots",
+                    "id": "dots",
+                    "type": "select",
+                    "options": [
+                        {
+                            "label": "Yes",
+                            "value": "yes"
+                        },
+                        {
+                            "label": "No",
+                            "value": "no"
+                        }
+                    ],
+                    "default": "yes"
+                },
+                {
+                    "label": "Arrows",
+                    "id": "arrows",
+                    "type": "select",
+                    "options": [
+                        {
+                            "label": "Yes",
+                            "value": "yes"
+                        },
+                        {
+                            "label": "No",
+                            "value": "no"
+                        }
+                    ],
+                    "default": "no"
+                }
+            ]
+        },
+        {
+            "id": "mobileSlider",
+            "label": "Mobile Slider",
+            "type": "custom",
+            "elements": [
+                {
+                    "label": "Autoplay",
+                    "id": "autoplay",
+                    "type": "select",
+                    "options": [
+                        {
+                            "label": "Yes",
+                            "value": "yes"
+                        },
+                        {
+                            "label": "No",
+                            "value": "no"
+                        }
+                    ],
+                    "default": "yes"
+                },
+                {
+                    "label": "Arrows",
+                    "id": "arrows",
+                    "type": "select",
+                    "options": [
+                        {
+                            "label": "Yes",
+                            "value": "yes"
+                        },
+                        {
+                            "label": "No",
+                            "value": "no"
+                        }
+                    ],
+                    "default": "no"
+                },
+                {
+                    "label": "Dots",
+                    "id": "dots",
+                    "type": "select",
+                    "options": [
+                        {
+                            "label": "Yes",
+                            "value": "yes"
+                        },
+                        {
+                            "label": "No",
+                            "value": "no"
+                        }
+                    ],
+                    "default": "yes"
+                }
+            ]
+        }
+    ],
+    "rules": {
+        "listitem": {
+            "fields": {
+                "item_name": {
+                    "label": "Item Title",
+                    "type": "quickEditor",
+                    "show": "yes"
+                },
+                "item_button": {
+                    "label": "Item Button",
+                    "type": "hrefbutton",
+                    "show": "yes"
+                },
+                "item_media": {
+                    "label": "Item Media",
+                    "type": "singlefile",
+                    "show": "yes"
+                },
+                "item_description": {
+                    "label": "Item Description",
+                    "type": "quickEditor",
+                    "show": "yes"
+                }
+            },
+            "default": [
+                {
+                    "item_name": "Enter title here",
+                    "item_button": [
+                        "Explore more"
+                    ],
+                    "item_media": "img3.jpg",
+                    "item_description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quia iure corporis cupiditate?"
+                },
+                {
+                    "item_name": "Enter title here",
+                    "item_button": [
+                        "Explore more"
+                    ],
+                    "item_media": "img4.jpg",
+                    "item_description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quia iure corporis cupiditate?"
+                },
+                {
+                    "item_name": "Enter title here",
+                    "item_button": [
+                        "Explore more"
+                    ],
+                    "item_media": "img5.jpg",
+                    "item_description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quia iure corporis cupiditate?"
+                }
+            ]
+        }
+    }
+}

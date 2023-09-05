@@ -1,0 +1,26 @@
+{
+    "type": "plans",
+    "settings": [],
+    "rules": {
+        "title": {
+            "label": "Title",
+            "type": "quickEditor",
+            "show": "yes",
+            "default": "Our Plans"
+        },
+        "subtitle": {
+            "label": "Subtitle",
+            "type": "quickEditor",
+            "show": "yes",
+            "default": "Choose best plans suitable for you"
+        },
+        "button": {
+            "label": "Action Button",
+            "type": "hrefbutton",
+            "show": "yes",
+            "default": [
+                "Explore more"
+            ]
+        }
+    }
+}

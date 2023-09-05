@@ -1,0 +1,28 @@
+{
+    "settings": [],
+    "rules": {
+        "title": {
+            "label": "Title",
+            "type": "quickEditor",
+            "show": "yes",
+            "default": "Get in Touch"
+        },
+        "subtitle": {
+            "label": "Subtitle",
+            "type": "quickEditor",
+            "show": "yes",
+            "default": "Lorem, ipsum dolor sit amet"
+        },
+        "form": {
+            "label": "Contact Form",
+            "type": "siteform",
+            "show": "yes"
+        },
+        "media": {
+            "label": "Media",
+            "type": "singlefile",
+            "show": "yes",
+            "default": "img4.jpg"
+        }
+    }
+}
